@@ -11,7 +11,7 @@
           <img src="img/icon_logo.svg" width="154" height="62" alt="Логотип Глейси Шоп">
         </a>
         <ul class="site-navigation">
-          <li><button>Каталог</button>
+          <li><a class="button" href="#catalog.html">Каталог</a>
             <ul>
               <li><a href="#new.html">Новинки</a></li>
               <li><a href="inner.html">Сливочное</a></li>
@@ -24,7 +24,7 @@
           <li><a href="#info.html">О компании</a></li>
           <li class="modal">
             <form class="search" method="get" action="https://echo.htmlacademy.ru">
-              <button class="button-search">Поиск</button>
+              <a class="button button-search" href="#search.html">Поиск</a>
               <label for="search-text">
                 <input id="search-text" type="search" name="question" placeholder="Что ищем?">
               </label>
@@ -32,8 +32,8 @@
           </li>
         </ul>
         <ul class="user-navigation">
-          <li><button class="button-login">Вход</button></li>
-          <li><button class="button-cart">Корзина</button></li>
+          <li><a class="button login-link">Вход</a></li>
+          <li><a class="button cart">Корзина</a></li>
         </ul>
       </nav>
       <div class="short-contacts">
@@ -154,9 +154,7 @@
         <h2 class="visually-hidden">Подписка на рассылку</h2>
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
         <form class="signup" action="https://echo.htmlacademy.ru" method="post">
-          <label for="signup-text">
-            <input id="signup-text" type="email" name="email" placeholder="Электронная почта">
-          </label>
+          <input type="email" name="email" placeholder="Электронная почта">
           <button type="submit">Отправить</button>
         </form>
       </section>

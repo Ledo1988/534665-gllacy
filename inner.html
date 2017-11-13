@@ -11,7 +11,7 @@
             <img src="img/icon_logo.svg" width="155" height="70" alt="Логотип магазина мороженого «Глейси»">
           </a>
         <ul class="site-navigation">
-          <li><button class="chosen">Каталог</button>
+          <li><a class="button" href="#catalog.html">Каталог</a>
             <ul>
               <li><a href="#new.html">Новинки</a></li>
               <li><a class="current-page" href="inner.html">Сливочное</a></li>
@@ -24,7 +24,7 @@
           <li><a href="info.html">О компании</a></li>
           <li class="modal">
             <form class="search" method="get" action="https://echo.htmlacademy.ru">
-              <button class="button-search">Поиск</button>
+              <a class="button button-search" href="#search.html">Поиск</a>
               <label for="search-text">
                 <input id="search-text" type="search" name="question" placeholder="Что ищем?">
               </label>
@@ -32,8 +32,8 @@
           </li>
         </ul>
         <ul class="user-navigation">
-          <li><button class="button-login">Вход</button></li>
-          <li><button class="button-cart">Корзина</button></li>
+          <li><a class="button login-link">Вход</a></li>
+          <li><a class="button cart">Корзина</a></li>
         </ul>
       </nav>
       <div class="short-contacts">
@@ -60,23 +60,28 @@
               <option value="calories">по жирности</option>
             </select>
           </p>
-            <label for="filtr-rate">Цена: 100 руб. - 500 руб.</label>
-            <input id="filtr-rate" type="range" min="100" max="500">
-          <p>
-            <label for="filtr-calories">Жирность:</label>
-            <p><input id="filtr-calories" type="radio" name="calories" value="0%">0%</p>
-            <p><input id="filtr-calories" type="radio" name="calories" value="<10%" checked>до 10%</p>
-            <p><input id="filtr-calories" type="radio" name="calories" value="<30%">до 30%</p>
-            <p><input id="filtr-calories" type="radio" name="calories" value=">30%">выше 30%</p>
-          </p>
-          <p>
-            <label for="filtr-fill">Наполнители:</label>
-            <p><input id="filtr-fill" type="checkbox" name="chocolate" value="1" checked>шоколадные</p>
-            <p><input id="filtr-fill" type="checkbox" name="sugar powders" value="2" checked>сахарные присыпки</p>
-            <p><input id="filtr-fill" type="checkbox" name="fruits" value="3">фрукты</p>
-            <p><input id="filtr-fill" type="checkbox" name="syrups" value="4">сиропы</p>
-            <p><input id="filtr-fill" type="checkbox" name="jams" value="5">джемы</p>
-          </p>
+          <fieldset>
+            <legend>Цена:</legend>
+            <input type="number" min="100" max="500" step="5" placeholder="100 руб.">
+            <span>-</span>
+            <input type="number" min="100" max="500" step="5" placeholder="500 руб.">
+            <input type="range" min="100" max="500">
+          </fieldset>
+          <fieldset>
+            <legend>Жирность:</legend>
+            <p><input type="radio" name="calories" value="0%">0%</p>
+            <p><input type="radio" name="calories" value="<10%" checked>до 10%</p>
+            <p><input type="radio" name="calories" value="<30%">до 30%</p>
+            <p><input type="radio" name="calories" value=">30%">выше 30%</p>
+          </fieldset>
+          <fieldset>
+            <legend>Наполнители:</legend>
+            <p><input type="checkbox" name="chocolate" value="1" checked>шоколадные</p>
+            <p><input type="checkbox" name="sugar powders" value="2" checked>сахарные присыпки</p>
+            <p><input type="checkbox" name="fruits" value="3">фрукты</p>
+            <p><input type="checkbox" name="syrups" value="4">сиропы</p>
+            <p><input type="checkbox" name="jams" value="5">джемы</p>
+          </fieldset>
           <button type="submit">Применить</button>
         </form>
       </section>
@@ -93,7 +98,7 @@
               <img src="img/icon_ruble.svg" width="32" height="37" alt="руб">
               <span>/кг</span>
             </p>
-            <button class="item-view">Быстрый просмотр</button>
+            <a class="button item-view" href="#catalog-item1">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="#catalog-item2">
@@ -105,7 +110,7 @@
               <img src="img/icon_ruble.svg" width="32" height="37" alt="руб">
               <span>/кг</span>
             </p>
-            <button class="item-view">Быстрый просмотр</button>
+            <a class="button item-view" href="#catalog-item2">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="#catalog-item3">
@@ -117,7 +122,7 @@
               <img src="img/icon_ruble.svg" width="32" height="37" alt="руб">
               <span>/кг</span>
             </p>
-            <button class="item-view">Быстрый просмотр</button>
+            <a class="button item-view" href="#catalog-item3">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="#catalog-item4">
@@ -129,7 +134,7 @@
               <img src="img/icon_ruble.svg" width="32" height="37" alt="руб">
               <span>/кг</span>
             </p>
-            <button class="item-view">Быстрый просмотр</button>
+            <a class="button item-view" href="#catalog-item4">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="#catalog-item5">
@@ -141,7 +146,7 @@
               <img src="img/icon_ruble.svg" width="32" height="37" alt="руб">
               <span>/кг</span>
             </p>
-            <button class="item-view">Быстрый просмотр</button>
+            <a class="button item-view" href="#catalog-item5">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="#catalog-item6">
@@ -153,7 +158,7 @@
               <img src="img/icon_ruble.svg" width="32" height="37" alt="руб">
               <span>/кг</span>
             </p>
-            <button class="item-view">Быстрый просмотр</button>
+            <a class="button item-view" href="#catalog-item6">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="#catalog-item7">
@@ -165,7 +170,7 @@
               <img src="img/icon_ruble.svg" width="32" height="37" alt="руб">
               <span>/кг</span>
             </p>
-            <button class="item-view">Быстрый просмотр</button>
+            <a class="button item-view" href="#catalog-item7">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="#catalog-item8">
@@ -177,7 +182,7 @@
               <img src="img/icon_ruble.svg" width="32" height="37" alt="руб">
               <span>/кг</span>
             </p>
-            <button class="item-view">Быстрый просмотр</button>
+            <a class="button item-view" href="#catalog-item8">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="#catalog-item9">
@@ -189,7 +194,7 @@
               <img src="img/icon_ruble.svg" width="32" height="37" alt="руб">
               <span>/кг</span>
             </p>
-            <button class="item-view">Быстрый просмотр</button>
+            <a class="button item-view" href="#catalog-item9">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="#catalog-item10">
@@ -201,7 +206,7 @@
               <img src="img/icon_ruble.svg" width="32" height="37" alt="руб">
               <span>/кг</span>
             </p>
-            <button class="item-view">Быстрый просмотр</button>
+            <a class="button item-view" href="#catalog-item10">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="#catalog-item11">
@@ -213,7 +218,7 @@
               <img src="img/icon_ruble.svg" width="32" height="37" alt="руб">
               <span>/кг</span>
             </p>
-            <button class="item-view">Быстрый просмотр</button>
+            <a class="button item-view" href="#catalog-item11">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="#catalog-item12">
@@ -225,7 +230,7 @@
               <img src="img/icon_ruble.svg" width="32" height="37" alt="руб">
               <span>/кг</span>
             </p>
-            <button class="item-view">Быстрый просмотр</button>
+            <a class="button item-view" href="#catalog-item12">Быстрый просмотр</a>
           </li>
         </ul>
         <ul class="pagination-list">

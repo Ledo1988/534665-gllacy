@@ -51,15 +51,15 @@
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <form class="filtr" action="index.html" method="post">
-          <p>
-            <label for="filtr-sort">Сортировка</label>
-            <select id="filtr-sort" name="filtr-sort">
+          <fieldset>
+            <legend>Сортировка</legend>
+            <select name="filtr-sort">
               <option value="popular">по популярности</option>
               <option value="cheap">сначала недорогие</option>
               <option value="expensive">сначала дорогие</option>
               <option value="calories">по жирности</option>
             </select>
-          </p>
+          </fieldset>
           <fieldset>
             <legend>Цена:</legend>
             <input type="number" min="100" max="500" step="5" placeholder="100 руб.">

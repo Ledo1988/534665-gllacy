@@ -16,14 +16,14 @@ body {
   background-repeat: no-repeat;
 }
 
-a {
+a, button {
   text-decoration: none;
+  color: #ffffff;
 }
 
 .inner-page {
-  background-image: url("../img/bg_lighten1.png");
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%, transparent 15%);
 }
-/*Как наложить белый фон?*/
 
 .main-navigation {
   font-size: 16px;
@@ -46,11 +46,6 @@ a {
   border-bottom: none;
 }
 
-.site-navigation a,
-.catalog-navigation a,
-.user-navigation a {
-  color: #ffffff;
-}
 
 .site-navigation a:hover,
 .site-navigation a:focus,
@@ -79,13 +74,126 @@ a {
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
-
   list-style: none;
 }
 
+.background {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
 
+.background p {
+  font-size: 60px;
+  line-height: 60.35px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+}
+
+button[type="submit"], .button {
+  font-weight: 700;
+
+  border: none;
+  border-radius: 40px;
+  text-align: center;
+  background-color: #e74a35;
+  background-image: linear-gradient(to top, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  box-shadow: 0px 2px 2px 0px rgb( 172, 16, 0 );
+}
+
+button[type="submit"]:hover, .button:hover {
+  border: none;
+  border-radius: 40px;
+  text-align: center;
+  background-color: #e74a35;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 100%, transparent 100%);
+  box-shadow: 0px 2px 2px 0px rgb( 172, 16, 0 );
+}
+
+button[type="submit"]:active, .button:active {
+  border: none;
+  border-radius: 40px;
+  text-align: center;
+  background-color: #e74a35;
+  background-image: linear-gradient(to bottom, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  box-shadow: inset 0px 2px 0px #942718;
+}
+
+.slider-button {
+  padding-left: 43px;
+  padding-right: 43px;
+  padding-top: 9px;
+  padding-bottom: 13px;
+
+  font-size: 32px;
+  line-height: 44px;
+  font-weight: 700;
+
+  text-shadow: 0px 2px 5px rgb( 160, 32, 11);
+}
+
+.slider-list {
+  list-style: none;
+}
+
+.banners-list {
+  padding: 0px;
+  margin: 0px;
+  height: 250px;
+
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.banners-list h3 {
+  padding-left: 0px;
+  margin-top: 20px;
+
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.banners-item {
+  margin: auto;
+}
+
+.banners-item:first-of-type {
+  margin: 0px 25px 0px 40px;
+  padding: 0px 25px 0px 25px;
+
+  background-image: url("../img/bg_malina.jpg");
+  border-radius: 15px;
+}
+
+.banners-item:last-of-type {
+  margin: 0px 40px 0px 25px;
+  padding: 0px 25px 0px 25px;
+
+  background-image: url("../img/bg_choko.jpg");
+  border-radius: 15px;
+}
+
+/*.banners-item a {} выравнивание по левому краю*/
+
+.banner-button {
+  padding-left: 23px;
+  padding-right: 23px;
+  padding-top: 7px;
+  padding-bottom: 11px;
+
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+
+  text-shadow: 0px 2px 5px rgb( 160, 32, 11);
+}
 .slider-list,
-.banners-list,
 .catalog-list,
 .features-list,
 .social-list,
@@ -94,4 +202,8 @@ a {
 .breadcrumbs,
 .pagination-list {
   list-style: none;
+}
+
+.visually-hidden {
+  visibility: hidden;
 }

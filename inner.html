@@ -3,16 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>Глейси - Сливочное</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="inner-page">
     <header class="main-header">
       <nav class="main-navigation">
         <a class="main-header-logo" href="index.html">
-            <img src="img/icon_logo.svg" width="155" height="70" alt="Логотип магазина мороженого «Глейси»">
+            <img src="img/icon_logo.svg" width="154" height="62" alt="Логотип магазина мороженого «Глейси»">
           </a>
         <ul class="site-navigation">
           <li><a class="button" href="#catalog.html">Каталог</a>
-            <ul>
+            <ul class="catalog-navigation">
               <li><a href="#new.html">Новинки</a></li>
               <li><a class="current-page" href="inner.html">Сливочное</a></li>
               <li><a href="#scrubbings.html">Щербеты</a></li>
@@ -32,8 +35,8 @@
           </li>
         </ul>
         <ul class="user-navigation">
-          <li><a class="button login-link">Вход</a></li>
-          <li><a class="button cart">Корзина</a></li>
+          <li><a class="button login-link" href="#login">Вход</a></li>
+          <li><a class="button cart" href="#cart">Корзина</a></li>
         </ul>
       </nav>
       <div class="short-contacts">
@@ -247,7 +250,7 @@
     </main>
     <footer class="main-footer">
       <div class="footer-social">
-        <ul>
+        <ul class="social-list">
           <li><a class="social-button" href="https://twitter.com/">Твиттер</a></li>
           <li><a class="social-button" href="https://instagram.com/">Инстаграм</a></li>
           <li><a class="social-button" href="https://facebook.com/">Фейсбук</a></li>

@@ -89,7 +89,7 @@ a, button {
   border-radius: 40px;
 
   background-color: #ededed;
-  box-shadow: inset 0px 2px 1px #696969;
+  box-shadow: inset 0px 2px 1px 0px #696969;
 }
 
 .catalog-navigation {
@@ -97,6 +97,7 @@ a, button {
   height: 171px;
 
   background-color: #f8f7f4;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
 .catalog-navigation li {
@@ -110,7 +111,12 @@ a, button {
 .catalog-navigation li:first-of-type {
   border-bottom: 1px solid #d1d0ce;
   font-weight: 700;
+}
 
+.catalog-navigation li:nth-of-type(2),
+.catalog-navigation li:nth-of-type(2):hover,
+.catalog-navigation li:nth-of-type(2):focus {
+  margin-top: 5px;
 }
 
 .catalog-navigation a {
@@ -129,6 +135,12 @@ a, button {
   box-shadow: none;
 }
 
+.catalog-new a:hover,
+.catalog-new a:focus,
+.catalog-new a:active {
+  font-weight: 700;
+}
+
 .catalog-navigation li:hover,
 .catalog-navigation li:focus {
   margin: 0px;
@@ -138,23 +150,41 @@ a, button {
 
 .catalog-navigation li:active {
   margin: 0px;
-  padding-left: 15px;
   background-color: #f6b5a5;
 }
 
 li .current-page {
-  margin: auto;
+  margin: 0;
+  margin-top: 5px;
   background-color: #d07058;
 }
 
 .current-page a {
+  padding-left: 15px;
   color: #ffffff;
 }
 
-.current-page a:hover, a:active, a:focus,
- li .current-page:hover, li .current-page:active {
+.current-page a:active,
+li .current-page:active {
   color: #ffffff;
+  background-color: #d07058;
+}
+
+li .current-page:hover {
+  margin-top: 5px;
   padding-left: 10px;
+
+  color: #ffffff;
+  background-color: #d07058;
+}
+
+.current-page a:hover,
+.current-page a:focus {
+  margin-top: 5px;
+  padding-left: 15px;
+
+  color: #ffffff;
+  background-color: #d07058;
 }
 
 .catalog-new:hover {
@@ -173,8 +203,15 @@ li .current-page {
 .search {
   width: 340px;
   height: 85px;
+
   background-color: #f8f7f4;
   color: #333333;
+
+  border-radius: 5px;
+}
+
+.site-navigation li:last-of-type {
+  display: inline-block;
 }
 
 .short-contacts {
@@ -221,34 +258,25 @@ button[type="submit"], .button {
   font-weight: 700;
 
   text-align: center;
-  background-color: #e74a35;
-  background-image: linear-gradient(to top, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  box-shadow: 0px 2px 2px 0px rgb( 172, 16, 0 );
+  vertical-align: middle;
+
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(to top, rgb(202,56,36) 0%, rgb(242,104,67) 100%);
+  box-shadow: 0px 2px 2px 0px rgb(85, 8, 0, 0.54);
 
   border: none;
   border-radius: 40px;
 }
 
 button[type="submit"]:hover, .button:hover {
-  text-align: center;
-
-  background-color: #e74a35;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 100%, transparent 100%);
-  box-shadow: 0px 2px 2px 0px rgb( 172, 16, 0 );
-
-  border: none;
-  border-radius: 40px;
+  background-image: linear-gradient(to bottom, rgba(242,104,67,0.8) 100%, rgba(231,74,53,0.8));
+  box-shadow: 0px 1px 2px 0px rgb(172, 16, 0);
 }
 
 button[type="submit"]:active, .button:active {
-  text-align: center;
-
-  background-color: #e74a35;
-  background-image: linear-gradient(to bottom, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  box-shadow: inset 0px 2px 0px #942718;
-
-  border: none;
-  border-radius: 40px;
+  background-color: rgb(0,0,0);
+  background-image: linear-gradient(to bottom, rgba(231,74,53, 0.93) 0%, rgba(242,104,67, 0.93) 100%);
+  box-shadow: inset 0px 2px 2px #942718;
 }
 
 .slider-button {
@@ -261,7 +289,21 @@ button[type="submit"]:active, .button:active {
   line-height: 44px;
   font-weight: 700;
 
-  text-shadow: 0px 2px 5px rgb( 160, 32, 11);
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(to top, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+}
+
+.slider-button:hover {
+  background-image: linear-gradient(to top, rgba(231,74,53,0.8) 100%, rgba(242,104,67,0.8) 0%);
+  box-shadow: 0px 2px 2px 0px rgb(172, 16, 0);
+}
+
+.slider-button:active {
+  background-color: rgb(0,0,0,0.07);
+  background-image: linear-gradient(to top, rgba(231,74,53,0.93) 100%, rgba(242,104,67,0.93) 0%);
+  box-shadow: inset 0px 2px 2px 0px rgb(148, 39, 24);
 }
 
 .slider-list {
@@ -294,6 +336,8 @@ button[type="submit"]:active, .button:active {
   margin: auto;
   height: 250px;
   width: 44.4%;
+
+  text-align: right;
 }
 
 .banners-item:first-of-type {
@@ -324,7 +368,6 @@ button[type="submit"]:active, .button:active {
   line-height: 24px;
   font-weight: 700;
 
-  text-shadow: 0px 2px 5px rgb( 160, 32, 11);
 }
 
 .catalog-list {
@@ -333,6 +376,7 @@ button[type="submit"]:active, .button:active {
 
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   list-style: none;
 }
@@ -507,7 +551,6 @@ button[type="submit"]:active, .button:active {
 }
 
 .news {
-
   height: 220px;
   width: 560px;
 
@@ -581,12 +624,14 @@ button[type="submit"]:active, .button:active {
   margin: 0;
   padding: 0;
   width: 1200px;
+  overflow: hidden;
 
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
   color: #323232;
 }
+
 
 .map span {
   font-size: 18px;
@@ -664,12 +709,15 @@ button[type="submit"]:active, .button:active {
   list-style: none;
 }
 
+.modal {
+  background-color: #f8f7f4;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+
 .modal-login {
   width: 277px;
   height: 214px;
-
-  background-color: #f8f7f4;
-  border-radius: 5px;
 }
 
 .user button {
@@ -688,14 +736,74 @@ button[type="submit"]:active, .button:active {
 }
 
 .modal-cart {
-  background-color: #f8f7f4;
+  width: 540px;
+  height: 245px;
+  position: relative;
 
   font-size: 13px;
   line-height: 16px;
   font-weight: 400;
   color: #323232;
-
 }
+
+table {
+  margin: 0px 10px;
+  border-bottom: 1px solid #cacac7;
+}
+
+.table-cart span {
+  color: #999999;
+}
+
+.modal-cart p {
+  margin: 10px 10px;
+
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+
+  text-align: right;
+}
+
+.modal-cart a {
+  float: right;
+  margin-right: 10px;
+
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.modal-reply {
+  width: 477px;
+  height: 442px;
+  padding-top: 20px;
+  padding-left: 25px;
+
+  background-color: #f8f7f4;
+  border-radius: 5px;
+}
+
+.modal-reply h2 {
+  margin-top: 0px;
+
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400px;
+}
+
+.modal-reply button {
+  float: right;
+  margin-right: 25px;
+
+  font-size: 18px;
+  line-height: 24px;
+  }
+
+.modal-reply textarea {
+  width: 432px;
+}
+
+/*Как создать затемнение и вывод на весь экран?*/
 
 .breadcrumbs,
 .pagination-list {

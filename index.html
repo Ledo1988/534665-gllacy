@@ -16,7 +16,7 @@
         <ul class="site-navigation">
           <li><a href="#catalog.html">Каталог</a>
             <ul class="catalog-navigation">
-              <li><a href="#new.html">Новинки</a></li>
+              <li class="catalog-new"><a href="#new.html">Новинки</a></li>
               <li><a href="inner.html">Сливочное</a></li>
               <li><a href="#scrubbings.html">Щербеты</a></li>
               <li><a href="#fruiticepops.html">Фруктовый лёд</a></li>
@@ -137,33 +137,37 @@
           <li class="features-item">
             <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
           </li>
-          <li class="feature-item">
+          <li class="features-item">
            <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
          </li>
-         <li class="feature-item">
+         <li class="features-item">
            <p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
          </li>
-         <li class="feature-item">
+         <li class="features-item">
            <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
          </li>
         </ul>
       </section>
-      <article class="news">
-        <h2 class="visually-hidden">Новости</h2>
-        <p>Новое в нашем блоге</p>
-        <a href="#10_ways_to_serve_scrubbings">10 способов сервировки фруктовых щербетов к столу</a>
-      </article>
-      <section class="mailing-form">
-        <h2 class="visually-hidden">Подписка на рассылку</h2>
-        <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-        <form class="signup" action="https://echo.htmlacademy.ru" method="post">
-          <input type="email" name="email" placeholder="Электронная почта">
-          <button type="submit">Отправить</button>
-        </form>
-      </section>
+      <div class="news-and-mail">
+        <article class="news">
+          <h2 class="visually-hidden">Новости</h2>
+          <p>Новое в нашем блоге</p>
+          <a href="#10_ways_to_serve_scrubbings">10 способов сервировки фруктовых щербетов к столу</a>
+        </article>
+        <div class="post-form">
+          <section class="mailing-form">
+            <h2 class="visually-hidden">Подписка на рассылку</h2>
+            <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+            <form class="signup" action="https://echo.htmlacademy.ru" method="post">
+              <input type="email" name="email" placeholder="Электронная почта">
+              <button type="submit">Отправить</button>
+            </form>
+          </section>
+        </div>
+      </div>
       <section class="map">
         <h2 class="visually-hidden">Карта, как нас найти</h2>
-        <img src="img/map_with_pin.jpg" alt="Карта" width="1250" height="430">
+        <img src="img/map_with_pin.jpg" alt="Карта" width="1200" height="430">
         <section class="contacts">
           <h2 class="visually-hidden">Контактная информация</h2>
           <p>
@@ -192,20 +196,19 @@
       </div>
       <div class="footer-navigation">
         <ul class="internal-navigation">
-          <li><a href="#suppliers">Для поставщиков</a></li>
+          <li><a href="#suppliers" class="suppliers">Для поставщиков</a></li>
           <li><a href="#production">О производстве</a></li>
           <li><a href="#documents" >Наши документы</a></li>
           <li><a href="#ecostandarts" >Экологические стандарты</a></li>
         </ul>
       </div>
       <p class="footer-copyright">
-        <a class="copyright" href="https://htmlacademy.ru">HTML Academy</a>
         <img src="img/icon_logo-htmlacademy.svg" alt="Лого HTML Academy" width="108" height="37">
-        <b>Сделано в HTML Academy © 2017</b>
+        <span>Сделано в <a class="copyright" href="https://htmlacademy.ru">HTML Academy</a> © 2017</span>
       </p>
     </footer>
     <section class="modal modal-login">
-      <h2>Личный кабинет</h2>
+      <h2 class="visually-hidden">Личный кабинет</h2>
       <form class="user" action="https://echo.htmlacademy.ru" method="post">
         <p>
           <label for="user-login">

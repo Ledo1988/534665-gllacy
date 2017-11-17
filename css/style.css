@@ -23,6 +23,17 @@ a, button {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+fieldset {
+  border: 0px;
+}
+
 .bg-3 {
   background-color: #9d8b84;
   background-image: url("../img/bg_ice-cream-3.png");
@@ -92,6 +103,8 @@ a, button {
   box-shadow: inset 0px 2px 1px 0px #696969;
 }
 
+/*Как у ссылки убрать изменённое состояние после нажатия?*/
+
 .catalog-navigation {
   width: 143px;
   height: 171px;
@@ -153,6 +166,15 @@ a, button {
   background-color: #f6b5a5;
 }
 
+.catalog-button {
+  text-decoration: none;
+  text-decoration-color: #d07058;
+  font-weight: 700;
+  background-color: #d07058;
+  border-radius: 15px;
+}
+/*Как убрать underline элемента ? */
+
 li .current-page {
   margin: 0;
   margin-top: 5px;
@@ -210,6 +232,23 @@ li .current-page:hover {
   border-radius: 5px;
 }
 
+.button-search {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+/*поправить размеры*/
+
+.login-link {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+
+}
+
+.cart {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+}
+
 .site-navigation li:last-of-type {
   display: inline-block;
 }
@@ -254,7 +293,8 @@ ul {
   text-align: center;
 }
 
-button[type="submit"], .button {
+button[type="submit"],
+.button {
   font-weight: 700;
 
   text-align: center;
@@ -262,18 +302,20 @@ button[type="submit"], .button {
 
   background-color: rgb(255, 255, 255);
   background-image: linear-gradient(to top, rgb(202,56,36) 0%, rgb(242,104,67) 100%);
-  box-shadow: 0px 2px 2px 0px rgb(85, 8, 0, 0.54);
+  box-shadow: 0px 2px 2px 0px rgba(85, 8, 0, 0.54);
 
   border: none;
   border-radius: 40px;
 }
 
-button[type="submit"]:hover, .button:hover {
+button[type="submit"]:hover,
+.button:hover {
   background-image: linear-gradient(to bottom, rgba(242,104,67,0.8) 100%, rgba(231,74,53,0.8));
   box-shadow: 0px 1px 2px 0px rgb(172, 16, 0);
 }
 
-button[type="submit"]:active, .button:active {
+button[type="submit"]:active,
+.button:active {
   background-color: rgb(0,0,0);
   background-image: linear-gradient(to bottom, rgba(231,74,53, 0.93) 0%, rgba(242,104,67, 0.93) 100%);
   box-shadow: inset 0px 2px 2px #942718;
@@ -301,7 +343,7 @@ button[type="submit"]:active, .button:active {
 }
 
 .slider-button:active {
-  background-color: rgb(0,0,0,0.07);
+  background-color: rgba(0,0,0,0.07);
   background-image: linear-gradient(to top, rgba(231,74,53,0.93) 100%, rgba(242,104,67,0.93) 0%);
   box-shadow: inset 0px 2px 2px 0px rgb(148, 39, 24);
 }
@@ -385,6 +427,7 @@ button[type="submit"]:active, .button:active {
   width: 22.2%;
   height: 325px;
   margin: auto;
+  margin-bottom: 40px;
 
   position: relative;
 
@@ -409,7 +452,7 @@ button[type="submit"]:active, .button:active {
 
 .catalog-item img {
   border-radius: 50%;
-  border-color: none;
+  border: none;
 }
 
 .catalog-item::before {
@@ -442,16 +485,20 @@ button[type="submit"]:active, .button:active {
   vertical-align: middle;
 
   background: url("../img/icon_ruble.svg") no-repeat 0px 7px;
-  /* добавить тень к изображению #313235);*/
+  /* добавить тень к изображению #313235)
+  filter: drop-shadow(2px 2px 5px #333);*/
 }
 
 .item-price span:last-of-type {
   font-size: 30px;
 }
 
+.item-view {
+  display: none;
+}
+
 .features {
   width: 100%;
-  margin-top: 40px;
   padding: 0px;
 
   font-size: 16px;
@@ -684,6 +731,8 @@ button[type="submit"]:active, .button:active {
   list-style: none;
 }
 
+/*Наведение на ссылку и изменение свойств*/
+
 .footer-navigation a:hover, .news a:focus{
   color: #ffbc9e;
 }
@@ -788,7 +837,7 @@ table {
 
   font-size: 24px;
   line-height: 28px;
-  font-weight: 400px;
+  font-weight: 400;
 }
 
 .modal-reply button {
@@ -805,11 +854,108 @@ table {
 
 /*Как создать затемнение и вывод на весь экран?*/
 
-.breadcrumbs,
+.breadcrumbs {
+  position: relative;
+  list-style: none;
+}
+
+.breadcrumbs li::after {
+    display: inline-block;
+    content: "»";
+    position: absolute;
+    top: 0px;
+    left: 70px;
+}
+/*Вставить content: "»" для всех*/
+
+.filters {
+  margin: 0;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.filters legend {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.filters button {
+  width: 143px;
+  height: 36px;
+
+  font-size: 16px;
+  line-height: 18px;
+
+  background-color: rgba(255, 255, 255, 0.19);
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+
+  background-image: none;
+  box-shadow: none;
+}
+
+.filters button:hover,
+.filters button:focus {
+  color: #323232;
+
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+
+  background-image: none;
+  box-shadow: none;
+}
+
+.filters button:active {
+  color: #323232;
+
+  background-color: #ededed;
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+
+  background-image: none;
+  box-shadow: inset 0px 2px 1px 0px #696969;
+}
+
 .pagination-list {
   list-style: none;
+}
+
+.pagination-item {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.pagination-arrow-left img {
+  transform: scale(-1, 1);
+}
+
+.pagination-arrow-right img {
+  filter: brightness(200%);
+}
+
+.pagination-item-current a,
+.pagination-item a:active {
+  color: #323232;
+
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+/* Нет белого фона при нажатии ?*/
+
+.pagination-item a:hover,
+.pagination-item a:focus {
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.2);
 }
 
 .visually-hidden {
   visibility: hidden;
 }
+
+/*Как верно отобразить Быстрый просмотр ? */

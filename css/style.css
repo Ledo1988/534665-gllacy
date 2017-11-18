@@ -16,7 +16,8 @@ body {
   background-repeat: no-repeat;
 }
 
-a, button {
+a, button,
+a:visited {
   padding: 5px 10px;
 
   color: #ffffff;
@@ -300,7 +301,6 @@ button[type="submit"],
   text-align: center;
   vertical-align: middle;
 
-  background-color: rgb(255, 255, 255);
   background-image: linear-gradient(to top, rgb(202,56,36) 0%, rgb(242,104,67) 100%);
   box-shadow: 0px 2px 2px 0px rgba(85, 8, 0, 0.54);
 
@@ -375,11 +375,12 @@ button[type="submit"]:active,
 }
 
 .banners-item {
+  position: relative;
   margin: auto;
-  height: 250px;
+  height: 230px;
   width: 44.4%;
 
-  text-align: right;
+  text-align: left;
 }
 
 .banners-item:first-of-type {
@@ -401,15 +402,17 @@ button[type="submit"]:active,
 /*.banners-item a {} выравнивание по левому краю*/
 
 .banner-button {
-  padding-left: 23px;
-  padding-right: 23px;
-  padding-top: 7px;
-  padding-bottom: 11px;
+  position: absolute;
+  top: 165px;
+  right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
-
 }
 
 .catalog-list {
@@ -473,7 +476,7 @@ button[type="submit"]:active,
 
   font-size: 45px;
   line-height: 45px;
-  font-weight: 400;
+  font-weight: 700;
   text-align: left;
   color: #ffffff;
   text-shadow: 0px 1px 3px #313235;
@@ -514,6 +517,7 @@ button[type="submit"]:active,
   margin: 0;
   padding: 0;
   line-height: 0px;
+  font-weight: 500;
 }
 
 .features h2 + p {
@@ -632,7 +636,11 @@ button[type="submit"]:active,
 }
 
 .news a:hover, .news a:focus{
-  color: #ffbc9e;
+  color: #e84d37;
+}
+
+.news a:active {
+  color: #e84d37;
 }
 
 .post-form {
@@ -733,7 +741,7 @@ button[type="submit"]:active,
 
 /*Наведение на ссылку и изменение свойств*/
 
-.footer-navigation a:hover, .news a:focus{
+.footer-navigation a:hover {
   color: #ffbc9e;
 }
 
@@ -837,7 +845,7 @@ table {
 
   font-size: 24px;
   line-height: 28px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .modal-reply button {
@@ -874,7 +882,7 @@ table {
 
   font-size: 16px;
   line-height: 18px;
-  font-weight: 400;
+  font-weight: 500;
   color: #ffffff;
 }
 
@@ -928,7 +936,7 @@ table {
 .pagination-item {
   font-size: 16px;
   line-height: 18px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .pagination-arrow-left img {
@@ -944,7 +952,8 @@ table {
   color: #323232;
 
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255);
+  font-weight: 500;
 }
 /* Нет белого фона при нажатии ?*/
 

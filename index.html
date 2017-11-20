@@ -16,7 +16,7 @@
         <ul class="site-navigation">
           <li><a href="#catalog.html">Каталог</a>
             <ul class="catalog-navigation">
-              <li class="catalog-new"><a href="#new.html">Новинки</a></li>
+              <li><a class="catalog-new" href="#new.html">Новинки</a></li>
               <li><a href="inner.html">Сливочное</a></li>
               <li><a href="#scrubbings.html">Щербеты</a></li>
               <li><a href="#fruiticepops.html">Фруктовый лёд</a></li>
@@ -48,24 +48,25 @@
       <h1 class="visually-hidden">Gllacy Shop. Магазин мороженого</h1>
       <section class="background">
         <h2 class="visually-hidden">Популярные предложения</h2>
-        <ul class="slider-list">
-          <li class="slider-1">
-            <button class="slider-dot">1</button>
-            <p>Крем-брюле и пломбир <br>с малиновым джемом</p>
+          <div class="slider-list">
+            <input type="radio" id="btn-1" name="toggle" checked>
+            <input type="radio" id="btn-2" name="toggle">
+            <input type="radio" id="btn-3" name="toggle">
             <a class="slider-button button" href="#order">Давайте оба!</a>
-          </li>
-          <li class="slider-2">
-            <button class="slider-dot">2</button>
-            <p>Шоколадный пломбир <br>и лимонный сорбет</p>
-            <a class="slider-button button" href="#order" >Давайте оба!</a>
-          </li>
-          <li class="slider-3">
-            <button class="slider-dot">3</button>
-            <p>Пломбир с помадкой <br>и клубничный щербет</p>
-            <a class="slider-button button" href="#order">Давайте оба!</a>
-          </li>
-        </ul>
-      </section>
+            <div class="slider-controls">
+              <label for="btn-1"></label>
+              <label for="btn-2"></label>
+              <label for="btn-3"></label>
+            </div>
+            <div class="slider-inner">
+              <div class="slider-slides">
+                <p>Крем-брюле и пломбир <br>с малиновым джемом</p>
+                <p>Шоколадный пломбир <br>и лимонный сорбет</p>
+                <p>Пломбир с помадкой <br>и клубничный щербет</p>
+              </div>
+            </div>
+        </div>
+      </section>        
       <section class="banners">
         <h2 class="visually-hidden">Особые условия</h2>
         <ul class="banners-list">

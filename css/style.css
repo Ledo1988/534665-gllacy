@@ -16,8 +16,7 @@ body {
   background-repeat: no-repeat;
 }
 
-a, button,
-a:visited {
+a, button {
   padding: 5px 10px;
 
   color: #ffffff;
@@ -69,15 +68,15 @@ fieldset {
 
 .site-navigation a,
 .breadcrumbs a:not(last-of-type) {
+  padding: 5px 10px;
+
+  text-align: left;
   text-decoration: underline;
   text-decoration-color: #adbdb4;
 }
 
 .site-navigation a:hover,
 .site-navigation a:focus {
-  padding: 5px 10px;
-
-  text-align: center;
   color: #333333;
   font-weight: 700;
   text-decoration: none;
@@ -90,9 +89,6 @@ fieldset {
 }
 
 .site-navigation a:active {
-  padding: 5px 10px;
-
-  text-align: center;
   color: #333333;
   font-weight: 700;
   text-decoration: none;
@@ -104,22 +100,31 @@ fieldset {
   box-shadow: inset 0px 2px 1px 0px #696969;
 }
 
+.catalog-button {
+  text-decoration: none;
+  font-weight: 700;
+  background-color: #d07058;
+  border-radius: 15px;
+}
+/*Как убрать underline элемента ? */
 /*Как у ссылки убрать изменённое состояние после нажатия?*/
 
+
 .catalog-navigation {
-  width: 143px;
-  height: 171px;
+  width: 145px;
+  height: 176px;
+  margin: 0;
+  padding: 0;
 
   background-color: #f8f7f4;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
 }
 
 .catalog-navigation li {
+  display: block;
   margin-left: 5px;
   margin-right: 5px;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  padding-left: 10px;
 }
 
 .catalog-navigation li:first-of-type {
@@ -127,15 +132,22 @@ fieldset {
   font-weight: 700;
 }
 
-.catalog-navigation li:nth-of-type(2),
-.catalog-navigation li:nth-of-type(2):hover,
-.catalog-navigation li:nth-of-type(2):focus {
-  margin-top: 5px;
-}
-
 .catalog-navigation a {
+  display: inline-block;
+  top: 0;
+  left: 0;
+  width: 115px;
+
+  padding-left: 20px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-top: 5px;
+  margin-left: -5px;
+  margin-right: -5px;
+
   font-size: 14px;
   line-height: 16px;
+
   color: #323232;
   text-decoration: none;
   background-color: transparent;
@@ -147,71 +159,37 @@ fieldset {
   text-decoration: none;
   background-color: transparent;
   box-shadow: none;
-}
+  border-radius: 0px;
 
-.catalog-new a:hover,
-.catalog-new a:focus,
-.catalog-new a:active {
-  font-weight: 700;
-}
-
-.catalog-navigation li:hover,
-.catalog-navigation li:focus {
-  margin: 0px;
-  padding-left: 15px;
   background-color: #fbded7;
 }
 
-.catalog-navigation li:active {
-  margin: 0px;
+.catalog-new {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+li .catalog-new:hover,
+.catalog-new:focus {
+  font-weight: 700;
+}
+
+li .catalog-new:active {
   background-color: #f6b5a5;
 }
 
-.catalog-button {
-  text-decoration: none;
-  text-decoration-color: #d07058;
-  font-weight: 700;
-  background-color: #d07058;
-  border-radius: 15px;
-}
-/*Как убрать underline элемента ? */
+/*Жирный цвет при visited*/
 
 li .current-page {
-  margin: 0;
-  margin-top: 5px;
   background-color: #d07058;
-}
-
-.current-page a {
-  padding-left: 15px;
   color: #ffffff;
 }
 
-.current-page a:active,
-li .current-page:active {
-  color: #ffffff;
+li .current-page:hover,
+li .current-page:focus
+ {
   background-color: #d07058;
-}
-
-li .current-page:hover {
-  margin-top: 5px;
-  padding-left: 10px;
-
   color: #ffffff;
-  background-color: #d07058;
-}
-
-.current-page a:hover,
-.current-page a:focus {
-  margin-top: 5px;
-  padding-left: 15px;
-
-  color: #ffffff;
-  background-color: #d07058;
-}
-
-.catalog-new:hover {
-    font-weight: 700;
 }
 
 /*стилизовать подменю*/
@@ -310,14 +288,13 @@ button[type="submit"],
 
 button[type="submit"]:hover,
 .button:hover {
-  background-image: linear-gradient(to bottom, rgba(242,104,67,0.8) 100%, rgba(231,74,53,0.8));
+  background-image: linear-gradient(to top, rgb(236,111,94) 100%, rgb(245,134,105) 0%);
   box-shadow: 0px 1px 2px 0px rgb(172, 16, 0);
 }
 
 button[type="submit"]:active,
 .button:active {
-  background-color: rgb(0,0,0);
-  background-image: linear-gradient(to bottom, rgba(231,74,53, 0.93) 0%, rgba(242,104,67, 0.93) 100%);
+  background-image: linear-gradient(to bottom, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   box-shadow: inset 0px 2px 2px #942718;
 }
 
@@ -331,26 +308,72 @@ button[type="submit"]:active,
   line-height: 44px;
   font-weight: 700;
 
-  background-color: rgb(255, 255, 255);
   background-image: linear-gradient(to top, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
 }
 
 .slider-button:hover {
-  background-image: linear-gradient(to top, rgba(231,74,53,0.8) 100%, rgba(242,104,67,0.8) 0%);
+  background-image: linear-gradient(to top, rgb(236,111,94) 100%, rgb(245,134,105) 0%);
   box-shadow: 0px 2px 2px 0px rgb(172, 16, 0);
 }
 
 .slider-button:active {
-  background-color: rgba(0,0,0,0.07);
-  background-image: linear-gradient(to top, rgba(231,74,53,0.93) 100%, rgba(242,104,67,0.93) 0%);
+  background-image: linear-gradient(to top, rgba(231,74,53) 100%, rgba(242,104,67) 0%);
   box-shadow: inset 0px 2px 2px 0px rgb(148, 39, 24);
 }
 
 .slider-list {
   list-style: none;
+  position: relative;
 }
+
+.slider-list input[type=radio] {
+    display: none;
+}
+
+.slider-controls {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.slider-controls label {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    background-color: transparent;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.slider-controls label:hover,
+.slider-controls label:focus {
+    background-color: rgba(248,247,244,0.4);
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"] {
+background-color: #ffffff;
+}
+
+/*#btn-1:checked ~ .bg-1 {
+visibility: visible;
+}
+
+#btn-2:checked ~ .bg-2 {
+visibility: visible;
+}
+
+/*#btn-2:checked ~ .slider-inner .slider-slides {
+transform: translate(-450px);
+}
+
+#btn-3:checked ~ .slider-inner .slider-slides {
+transform: translate(-900px);
+}*/
 
 .banners-list {
   margin: 0;
@@ -988,6 +1011,12 @@ table {
   filter: brightness(200%);
 }
 
+.pagination-item a:hover,
+.pagination-item a:focus {
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.2);
+}
+
 .pagination-item-current a,
 .pagination-item a:active {
   color: #323232;
@@ -998,14 +1027,10 @@ table {
 }
 /* Нет белого фона при нажатии ?*/
 
-.pagination-item a:hover,
-.pagination-item a:focus {
-  border-radius: 50%;
-  background-color: rgba(255,255,255,0.2);
-}
 
 .visually-hidden {
   visibility: hidden;
 }
+
 
 /*Как верно отобразить Быстрый просмотр ? */

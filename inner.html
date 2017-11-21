@@ -10,31 +10,35 @@
   <body class="inner-page">
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="main-header-logo" href="index.html">
-            <img src="img/icon_logo.svg" width="154" height="62" alt="Логотип магазина мороженого «Глейси»">
+        <div class="navigation-box">
+          <a class="main-header-logo" href="index.html">
+              <img src="img/icon_logo.svg" width="154" height="62" alt="Логотип магазина мороженого «Глейси»">
           </a>
-        <ul class="site-navigation">
-          <li><a class="catalog-button" href="#catalog.html">Каталог</a>
-            <ul class="catalog-navigation">
-              <li><a class="catalog-new" href="#new.html">Новинки</a></li>
-              <li><a class="current-page" href="inner.html">Сливочное</a></li>
-              <li><a href="#scrubbings.html">Щербеты</a></li>
-              <li><a href="#fruiticepops.html">Фруктовый лёд</a></li>
-              <li><a href="#melorin.html">Мелорин</a></li>
-            </ul>
-          </li>
-          <li><a href="delivery.html">Доставка и оплата</a></li>
-          <li><a href="info.html">О компании</a></li>
-          <li class="modal search">
-            <form class="search" method="get" action="https://echo.htmlacademy.ru">
-              <a class="button-search" href="#search.html"><img src="img/icon_loupe.svg" width="17" height="17" alt="Поиск"></a>
+          <ul class="site-navigation">
+            <li class="catalog"><a class="catalog-button" href="#catalog.html">Каталог</a>
+              <ul class="catalog-navigation">
+                <li><a class="catalog-new" href="#new.html">Новинки</a></li>
+                <li><a class="current-page" href="inner.html">Сливочное</a></li>
+                <li><a href="#scrubbings.html">Щербеты</a></li>
+                <li><a href="#fruiticepops.html">Фруктовый лёд</a></li>
+                <li><a href="#melorin.html">Мелорин</a></li>
+              </ul>
+            </li>
+            <li><a href="delivery.html">Доставка и оплата</a></li>
+            <li><a href="info.html">О компании</a></li>
+          </ul>
+        </div>
+        <ul class="user-navigation">
+          <li class="search">
+            <a class="search-link" href="#search.html"><img src="img/icon_loupe.svg" width="17" height="17" alt="Поиск"></a>
+            <div class="modal search-form">
+            <form class="search-main" method="get" action="https://echo.htmlacademy.ru">
               <label for="search-text">
                 <input id="search-text" type="search" name="question" placeholder="Что ищем?">
               </label>
             </form>
+          </div>
           </li>
-        </ul>
-        <ul class="user-navigation">
           <li><a class="login-link" href="#login"><img src="img/icon_entrance.svg" width="20" height="19" alt="Вход">Вход</a></li>
           <li><a class="cart" href="#cart"><img src="img/icon_basket.svg" width="21" height="20" alt="Корзина">Пусто</a></li>
         </ul>
@@ -284,6 +288,7 @@
     </footer>
     <section class="modal modal-login">
       <h2 class="visually-hidden">Личный кабинет</h2>
+      <div class="login-form">
       <form class="user" action="https://echo.htmlacademy.ru" method="post">
         <p>
           <label for="user-login">
@@ -301,6 +306,7 @@
         </ul>
         <button type="submit">Войти</button>
       </form>
+    </div>
     </section>
     <section class="modal modal-cart">
       <h2 class="visually-hidden">Ваша корзина</h2>

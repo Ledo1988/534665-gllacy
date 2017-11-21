@@ -10,11 +10,12 @@
   <body class="bg-1 bg-2 bg-3">
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="main-header-logo">
+      <div class="navigation-box">
+        <div class="main-header-logo">
           <img src="img/icon_logo.svg" width="154" height="62" alt="Логотип Глейси Шоп">
-        </a>
+        </div>
         <ul class="site-navigation">
-          <li><a href="#catalog.html">Каталог</a>
+          <li class="catalog"><a href="#catalog.html">Каталог</a>
             <ul class="catalog-navigation">
               <li><a class="catalog-new" href="#new.html">Новинки</a></li>
               <li><a href="inner.html">Сливочное</a></li>
@@ -25,17 +26,44 @@
           </li>
           <li><a href="#delivery.html">Доставка и оплата</a></li>
           <li><a href="#info.html">О компании</a></li>
-          <li class="modal search">
-            <form class="search" method="get" action="https://echo.htmlacademy.ru">
-              <a class="button-search" href="#search.html"><img src="img/icon_loupe.svg" width="17" height="17" alt="Поиск"></a>
+        </ul>
+      </div>
+        <ul class="user-navigation">
+          <li class="search">
+            <a class="search-link" href="#search.html"><img src="img/icon_loupe.svg" width="17" height="17" alt="Поиск"></a>
+            <div class="modal search-form">
+            <form class="search-main" method="get" action="https://echo.htmlacademy.ru">
               <label for="search-text">
                 <input id="search-text" type="search" name="question" placeholder="Что ищем?">
               </label>
             </form>
+          </div>
           </li>
-        </ul>
-        <ul class="user-navigation">
-          <li><a class="login-link" href="#login"><img src="img/icon_entrance.svg" width="20" height="19" alt="Вход">Вход</a></li>
+          <li class="modal-login">
+            <a class="login-link" href="#login"><img src="img/icon_entrance.svg" width="20" height="19" alt="Вход">Вход</a>
+            <section class="modal login-form">
+              <h2 class="visually-hidden">Личный кабинет</h2>
+              <div class="user">
+              <form action="https://echo.htmlacademy.ru" method="post">
+                <p>
+                  <label for="user-login">
+                    <input id="user-login" type="email" name="email" placeholder="Электронная почта">
+                  </label>
+                </p>
+                <p>
+                  <label for="user-password">
+                    <input id="user-password" type="password" name="password" placeholder="Пароль">
+                  </label>
+                </p>
+                <ul class="login-list">
+                  <li><a href="#link">Забыли пароль?</a></li>
+                  <li><a href="#link">Новая регистрация</a></li>
+                </ul>
+                <button type="submit">Войти</button>
+              </form>
+            </user>
+            </section>
+          </li>
           <li><a class="cart" href="#cart"><img src="img/icon_basket.svg" width="21" height="20" alt="Корзина">Пусто</a></li>
         </ul>
       </nav>
@@ -66,7 +94,7 @@
               </div>
             </div>
         </div>
-      </section>        
+      </section>
       <section class="banners">
         <h2 class="visually-hidden">Особые условия</h2>
         <ul class="banners-list">
@@ -208,26 +236,7 @@
         <span>Сделано в <a class="copyright" href="https://htmlacademy.ru">HTML Academy</a> © 2017</span>
       </p>
     </footer>
-    <section class="modal modal-login">
-      <h2 class="visually-hidden">Личный кабинет</h2>
-      <form class="user" action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label for="user-login">
-            <input id="user-login" type="email" name="email" placeholder="Электронная почта">
-          </label>
-        </p>
-        <p>
-          <label for="user-password">
-            <input id="user-password" type="password" name="password" placeholder="Пароль">
-          </label>
-        </p>
-        <ul class="login-list">
-          <li><a href="#link">Забыли пароль?</a></li>
-          <li><a href="#link">Новая регистрация</a></li>
-        </ul>
-        <button type="submit">Войти</button>
-      </form>
-    </section>
+
     <section class="modal modal-cart">
       <h2 class="visually-hidden">Ваша корзина</h2>
       <table class="table-cart">
@@ -278,6 +287,7 @@
         <button type="submit">Отправить</button>
         <button type="button" class="big-close">X</button>
       </form>
+
     </section>
   </body>
 </html>

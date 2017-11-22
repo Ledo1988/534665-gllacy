@@ -45,6 +45,7 @@ fieldset {
 .inner-page {
   background-color: #849d8f;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%, transparent 15%);
+  background-size: 2000px;
 }
 
 .main-navigation {
@@ -327,10 +328,8 @@ button[type="submit"]:active,
     background-color: rgba(248,247,244,0.4);
 }
 
-#btn-1:checked ~ .slider-controls label[for="btn-1"],
-#btn-2:checked ~ .slider-controls label[for="btn-2"],
-#btn-3:checked ~ .slider-controls label[for="btn-3"] {
-background-color: #ffffff;
+.slider-controls label:active {
+    background-color: #ffffff;
 }
 
 /*#btn-1:checked ~ .bg-1 {
@@ -458,27 +457,34 @@ transform: translate(-900px);
   border-radius: 15px;
 }
 
-.features h2,
+.features-box h2,
 .news h2 {
-
   line-height: 0px;
   font-weight: 500;
 }
 
-.features h2 + p {
-
+.features-box p {
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
+  margin: 0;
+  padding: 0;
 }
+
+.features-left p,
+.features-right p {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+
+
+
 
 .features-list {
   list-style: none;
   }
-
-.features-item p {
-
-}
 
 .features-item:first-child p::before {
   content: "";
@@ -825,7 +831,9 @@ transform: translate(-900px);
 /*Стилизуем блоки в потоке*/
 html,
 body {
-  width: 100%;
+    max-width: 1200px;
+    min-width: 900px;
+    margin: 0 auto;
 }
 
 header, main, footer {
@@ -900,7 +908,7 @@ ul{
   height: 171px;
   position: absolute;
   top: 55px;
-  left: 192px;
+
   margin-top: 0;
 
   list-style: none;
@@ -1058,7 +1066,8 @@ li .catalog-new:hover,
   padding: 20px;
 }
 
-.user p,ul {
+.user p,
+.user ul {
   margin: 0;
   margin-bottom: 20px;
 }
@@ -1187,8 +1196,6 @@ td:nth-child(5) {
 .modal-reply button {
   float: right;
   margin-right: 25px;
-
-
   }
 
 .modal-reply textarea {
@@ -1202,7 +1209,7 @@ fieldset {
 .background {
   margin: 0;
   padding: 0;
-  width: 1200px;
+  width: 100%;
 
 }
 
@@ -1232,7 +1239,7 @@ button[type="submit"],
 }
 
 .slider-controls {
-  width: 41.35%;
+  width: 433px;
 }
 
 .slider-list {
@@ -1250,7 +1257,7 @@ button[type="submit"],
     height: 18px;
 
     border: 3px solid #ffffff;
-    margin-right: 8px;
+    margin-right: 5px;
 }
 
 #btn-1:checked ~ .slider-controls label[for="btn-1"],
@@ -1316,14 +1323,16 @@ button[type="submit"],
 }
 
 .catalog-item {
-  width: 22.2%;
+  width: 267px;
   height: 325px;
-  margin: auto;
+  margin: 0;
   margin-bottom: 40px;
 
   position: relative;
+}
 
-
+.catalog-item a {
+  padding: 0px;
 }
 
 .catalog-item h3 {
@@ -1342,7 +1351,6 @@ button[type="submit"],
 }
 
 .catalog-item-hit::before {
-
   position: absolute;
   width: 61px;
   height: 61px;
@@ -1360,29 +1368,27 @@ button[type="submit"],
   width: 295px;
   height: 405px;
   padding-top: 15px;
+  z-index: 1;
+}
 
-
+.catalog-item:hover + .bg_item-view,
+.bg_item-view:hover {
+  display: block;
 }
 
 .item-price {
   position: absolute;
   top: 220px;
-  left: 15px;
-
-
+  left: 0;
 }
 
 .item-price span:first-of-type {
   margin: 0px -5px;
-
   height: 100%;
-
-
 }
 
 .item-price span:last-of-type {
   margin: 0px -5px;
-
 }
 
 .item-view {
@@ -1398,79 +1404,82 @@ button[type="submit"],
 
 .features {
   width: 100%;
-  padding: 0px;
-
 
 }
 
-.features h2,
+.features-box {
+  display: flex;
+  justify-content: flex-start;
+  padding: 30px 30px 30px 20px;
+  flex-wrap: wrap;
+}
+
+.features-box h2,
 .news h2 {
   margin: 0;
   padding: 0;
   }
 
-.features h2 + p {
+.features-box h2 + p {
+  display: flex;
+  width: 1098px;
   margin: 0;
-  padding: 30px 20px 10px 20px;
-
-
 }
 
 .features-list {
+  width: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
 
-  flex-wrap: wrap;
-  justify-content: space-around;
+.features-left,
+.features-right {
+  width: 533px;
+}
+
+.features-item {
+  display: flex;
+  width: 533px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+
 }
 
 .features-item p {
-  display: flex;
-  position: relative;
+  width: 475px;
+  margin: 0;
+  margin-top: 30px;
 }
 
-.features-item:first-child p::before {
-
-  position: absolute;
+.features-left li:first-child::before {
+  content: "";
+  background: url(../img/icon_ice-cream.svg) no-repeat 0 0;
   width: 49px;
-  height: 49px;
-  top: 0;
-  left: 0;
-
-
+  margin-top: 10px;
 }
 
-.features-item:nth-child(2) p::before {
-
-  position: absolute;
+.features-left li:last-child::before {
+  content: "";
+  background: url(../img/icon_eco.svg) no-repeat 0 0;
   width: 49px;
-  height: 49px;
-  top: 40px;
-  left: 0;
-
-
+  margin-top: 10px;
 }
 
-.features-item:nth-child(3) p::before {
-
-  position: absolute;
+.features-right li:first-child::before {
+  content: "";
+  background: url(../img/icon_cow.svg) no-repeat 0 0;
   width: 49px;
-  height: 49px;
-  top: 0;
-  left: 40px;
-
-
+  margin-top: 10px;
 }
 
-.features-item:last-child p::before {
-
-  position: absolute;
+.features-right li:last-child::before {
+  content: "";
+  background: url(../img/icon_thermometer.svg) no-repeat 0 0;
   width: 49px;
-  height: 49px;
-  top: 0;
-  left: 40px;
-
-
+  margin-top: 10px;
 }
 
 .news-and-mail {

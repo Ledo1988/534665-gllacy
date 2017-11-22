@@ -39,8 +39,67 @@
             </form>
           </div>
           </li>
-          <li><a class="login-link" href="#login"><img src="img/icon_entrance.svg" width="20" height="19" alt="Вход">Вход</a></li>
-          <li><a class="cart" href="#cart"><img src="img/icon_basket.svg" width="21" height="20" alt="Корзина">Пусто</a></li>
+          <li class="modal-login">
+            <a class="login-link" href="#login"><img src="img/icon_entrance.svg" width="20" height="19" alt="Вход">Вход</a>
+            <section class="modal login-form">
+              <h2 class="visually-hidden">Личный кабинет</h2>
+              <div class="user">
+              <form action="https://echo.htmlacademy.ru" method="post">
+                <p>
+                  <label for="user-login">
+                    <input id="user-login" type="email" name="email" placeholder="Электронная почта">
+                  </label>
+                </p>
+                <p>
+                  <label for="user-password">
+                    <input id="user-password" type="password" name="password" placeholder="Пароль">
+                  </label>
+                </p>
+                <div class="login-entrance">
+                <ul class="login-list">
+                  <li><a href="#link">Забыли пароль?</a></li>
+                  <li><a href="#link">Новая регистрация</a></li>
+                </ul>
+                <button type="submit">Войти</button>
+              </div>
+              </form>
+            </div>
+            </section>
+          </li>
+          <li class="modal-cart">
+            <a class="cart-link" href="#cart"><img src="img/icon_basket.svg" width="21" height="20" alt="Корзина">Пусто</a>
+            <section class="modal cart-form">
+              <h2 class="visually-hidden">Ваша корзина</h2>
+              <table class="table-cart">
+                <caption class="visually-hidden">Ваша корзина</caption>
+                  <tr class="visually-hidden">
+                    <th>Удалить</th>
+                    <th>Изображение мороженого</th>
+                    <th>Название мороженого</th>
+                    <th>Вес/Цена</th>
+                    <th>Стоимость</th>
+                  </tr>
+                  <tr>
+                    <td><button class="small-close"><img src="img/icon_cross-small.svg" width="12" height="12" alt="Закрыть"></button></td>
+                    <td><img src="img/basket-ice-cream-1.png" width="33" height="33" alt="Изображение"></td>
+                    <td>Пломбир с апельсиновым джемом</td>
+                    <td>1,5 кг х <span>200 руб.</span></td>
+                    <td>300 руб.</td>
+                  </tr>
+                  <tr>
+                    <td><button class="small-close"><img src="img/icon_cross-small.svg" width="12" height="12" alt="Закрыть"></button></td>
+                    <td><img src="img/basket-ice-cream-2.png" width="33" height="33" alt="Изображение"></td>
+                    <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                    <td>1,5 кг х <span>300 руб.</span></td>
+                    <td>450 руб.</td>
+                  </tr>
+                </table>
+                <div class="cart-confirm">
+                <p>Итого: 750 руб.</p>
+                <a class="button" href="#order">Оформить заказ</a>
+              </div>
+            </section>
+          </li>
         </ul>
       </nav>
       <div class="short-contacts">
@@ -286,56 +345,5 @@
         <span>Сделано в <a class="copyright" href="https://htmlacademy.ru">HTML Academy</a> © 2017</span>
       </p>
     </footer>
-    <section class="modal modal-login">
-      <h2 class="visually-hidden">Личный кабинет</h2>
-      <div class="login-form">
-      <form class="user" action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label for="user-login">
-            <input id="user-login" type="email" name="email" placeholder="Электронная почта">
-          </label>
-        </p>
-        <p>
-          <label for="user-password">
-            <input id="user-password" type="password" name="password" placeholder="Пароль">
-          </label>
-        </p>
-        <ul class="login-list">
-          <li><a href="#link">Забыли пароль?</a></li>
-          <li><a href="#link">Новая регистрация</a></li>
-        </ul>
-        <button type="submit">Войти</button>
-      </form>
-    </div>
-    </section>
-    <section class="modal modal-cart">
-      <h2 class="visually-hidden">Ваша корзина</h2>
-      <table class="table-cart">
-        <caption class="visually-hidden">Ваша корзина</caption>
-          <tr class="visually-hidden">
-            <th>Удалить</th>
-            <th>Изображение мороженого</th>
-            <th>Название мороженого</th>
-            <th>Вес/Цена</th>
-            <th>Стоимость</th>
-          </tr>
-          <tr>
-            <td><button class="small-close">x</button></td>
-            <td><img src="img/basket-ice-cream-1.png" width="33" height="33" alt="Изображение"></td>
-            <td>Пломбир с апельсиновым джемом</td>
-            <td>1,5 кг х <span>200 руб.</span></td>
-            <td>300 руб.</td>
-          </tr>
-          <tr>
-            <td><button class="small-close">x</button></td>
-            <td><img src="img/basket-ice-cream-2.png" width="33" height="33" alt="Изображение"></td>
-            <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-            <td>1,5 кг х <span>300 руб.</span></td>
-            <td>450 руб.</td>
-          </tr>
-        </table>
-        <p>Итого: 750 руб.</p>
-        <a class="button" href="#order">Оформить заказ</a>
-    </section>
   </body>
 </html>

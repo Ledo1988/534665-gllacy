@@ -176,25 +176,42 @@ li .current-page:focus
 }
 
 
-li .login-link:hover {
+.login-link:hover {
   filter: invert(100%);
   background-color: #000000;
 }
 
-.cart {
+.modal-cart p {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+
+  text-align: right;
+}
+
+.cart-form a {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.cart-link {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 500;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 15px;
-  padding: 7px 34px 7px 16px;
+  padding: 4px 35px 3px 15px;
+  text-align: left;
 
 }
 
-.cart img {
+.cart-link img {
   margin: 0;
   vertical-align: middle;
   padding-right: 8px;
 }
 
-li .cart:hover {
+.cart-link:hover {
   filter: invert(100%);
   background-color: #000000;
 }
@@ -335,12 +352,17 @@ transform: translate(-900px);
 .banners-list {
   font-size: 18px;
   line-height: 22px;
+  font-weight: 700;
   color: #ffffff;
 }
 
 .banners-list h3 {
   font-size: 35px;
   line-height: 41px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
+
 }
 
 .banners-item {
@@ -659,35 +681,16 @@ transform: translate(-900px);
 }
 
 .modal-cart {
-
   font-size: 13px;
   line-height: 16px;
   font-weight: 400;
   color: #323232;
 }
 
-table {
-
-}
-
 .table-cart span {
   color: #999999;
 }
 
-.modal-cart p {
-
-  font-size: 15px;
-  line-height: 18px;
-  font-weight: 700;
-
-  text-align: right;
-}
-
-.modal-cart a {
-
-  font-size: 18px;
-  line-height: 24px;
-}
 
 .modal-reply {
 
@@ -811,16 +814,18 @@ table {
 
 .visually-hidden {
   visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  height: 0;
+  width: 0;
 }
-
 
 /*Как верно отобразить Быстрый просмотр ? */
 
 /*Стилизуем блоки в потоке*/
 html,
 body {
-  min-width: 1200px;
-  min-height: 2416px;
+  width: 100%;
 }
 
 header, main, footer {
@@ -829,6 +834,7 @@ header, main, footer {
 
 .main-header {
   min-height: 80px;
+
 }
 
 .main-navigation {
@@ -899,6 +905,7 @@ ul{
 
   list-style: none;
   display: none;
+  z-index:1;
 }
 
 .catalog a:hover + .catalog-navigation,
@@ -999,12 +1006,11 @@ li .catalog-new:hover,
   width: 341px;
   height: 84px;
   position: absolute;
-  top: 30px;
-
-  margin-top: 10px;
+  top: 40px;
 
   list-style: none;
   display: none;
+  z-index:1;
 }
 
 .search-main {
@@ -1029,7 +1035,7 @@ li .catalog-new:hover,
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content:center;
+  justify-content:flex-end;
   align-items: center;
   position: relative;
 }
@@ -1038,63 +1044,160 @@ li .catalog-new:hover,
   width: 277px;
   height: 214px;
   position: absolute;
-  top: 60px;
+  top: 40px;
 
   list-style: none;
-  display: block;
+  display: none;
+  z-index:1;
 }
 
 .user {
+  display: block;
+  width: 240px;
+  height: 173px;
   padding: 20px;
 }
 
+.user p,ul {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
 .user input {
-  width: 241px;
-  height: 44px;
+  width: 211px;
+  height: 12px;
   text-align: left;
-  padding-top: 0;
+  padding: 15px;
   border-radius: 5px;
   border: 1px solid #d3d3d2;
 }
 
-.search-link:hover + .search-form,
-.search-form:hover {
+.login-entrance {
+  width: 240px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content:center;
+  align-items: flex-start;
+  position: relative;
+}
+
+.login-entrance ul {
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+
+}
+.login-list a {
+  margin: 0;
+  padding: 0;
+}
+
+.login-entrance button {
+  padding: 10px 23px;
+}
+
+.login-link:hover + .login-form,
+.login-form:hover {
+  display: block;
+
+}
+
+.modal-cart {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+.cart-form {
+  width: 510px;
+  height: 202px;
+  position: absolute;
+  top: 40px;
+
+  padding: 20px 15px 20px 15px;
+  margin: 0;
+  list-style: none;
+  display: none;
+  z-index:1;
+}
+
+.table-cart {
+  width: 510px;
+  height: 110px;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+
+  border-bottom: 1px solid #cacac7;
+}
+
+td {
+  padding-left: 15px;
+  margin: 0;
+}
+
+td:nth-child(4),
+td:nth-child(5) {
+  white-space: nowrap;
+}
+
+.cart-link:hover + .cart-form,
+.cart-form:hover {
   display: block;
 }
 
+.modal-cart p {
+  padding: 0;
+  padding-bottom: 18px;
+  margin: 0;
+}
 
-/*
-<li><a class="login-link" href="#login"><img src="img/icon_entrance.svg" width="20" height="19" alt="Вход">Вход</a></li>
-<section class="modal modal-login">
-  <h2 class="visually-hidden">Личный кабинет</h2>
-  <form class="user" action="https://echo.htmlacademy.ru" method="post">
-    <p>
-      <label for="user-login">
-        <input id="user-login" type="email" name="email" placeholder="Электронная почта">
-      </label>
-    </p>
-    <p>
-      <label for="user-password">
-        <input id="user-password" type="password" name="password" placeholder="Пароль">
-      </label>
-    </p>
-    <ul class="login-list">
-      <li><a href="#link">Забыли пароль?</a></li>
-      <li><a href="#link">Новая регистрация</a></li>
-    </ul>
-    <button type="submit">Войти</button>
-  </form>
-</section> */
+.cart-confirm {
+  width: 510px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  padding: 0px;
+  padding-top:17px;
+}
+
+.cart-confirm a {
+  padding: 10px 14px;
+}
+
+.modal-reply {
+  width: 477px;
+  height: 442px;
+  padding-top: 20px;
+  padding-left: 25px;
+  display: none;
+
+}
+
+.modal-reply h2 {
+  margin-top: 0px;
+
+}
+
+.modal-reply button {
+  float: right;
+  margin-right: 25px;
 
 
+  }
+
+.modal-reply textarea {
+  width: 432px;
+}
 
 fieldset {
   border: 0px;
 }
-
-
-
-
 
 .background {
   margin: 0;
@@ -1109,35 +1212,30 @@ button[type="submit"],
 
 }
 
-button[type="submit"]:hover,
-.button:hover {
-
-}
-
-button[type="submit"]:active,
-.button:active {
-
-}
-
 .slider-button {
   padding-left: 43px;
   padding-right: 43px;
   padding-top: 9px;
   padding-bottom: 13px;
-
-
 }
 
-.slider-button:hover {
-
+.slider-inner {
+  visibility: hidden;
 }
 
-.slider-button:active {
+.slider-block {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+}
 
+.slider-controls {
+  width: 41.35%;
 }
 
 .slider-list {
-
   position: relative;
 }
 
@@ -1152,12 +1250,7 @@ button[type="submit"]:active,
     height: 18px;
 
     border: 3px solid #ffffff;
-
-}
-
-.slider-controls label:hover,
-.slider-controls label:focus {
-
+    margin-right: 8px;
 }
 
 #btn-1:checked ~ .slider-controls label[for="btn-1"],
@@ -1166,72 +1259,49 @@ button[type="submit"]:active,
 
 }
 
-/*#btn-1:checked ~ .bg-1 {
-visibility: visible;
-}
+.banners {
+  width: 100%;
+  height: 230px;
+  display: flex;
 
-#btn-2:checked ~ .bg-2 {
-visibility: visible;
-}
-
-/*#btn-2:checked ~ .slider-inner .slider-slides {
-transform: translate(-450px);
-}
-
-#btn-3:checked ~ .slider-inner .slider-slides {
-transform: translate(-900px);
-}*/
-
-.banners-list {
   margin: 0;
   padding: 0;
-  height: 250px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
 
+.banners ul {
+  padding: 0;
+  margin: 0;
+}
+
+.banners-list {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   list-style: none;
-
-
-}
-
-.banners-list h3 {
-  padding-left: 0px;
-  margin-top: 20px;
-
-
 }
 
 .banners-item {
-  position: relative;
-  margin: auto;
-  height: 230px;
-  width: 44.4%;
-
-
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  width: 45%;
+  padding: 20px;
 }
 
-.banners-item:first-of-type {
-  padding: 0px 25px 0px 25px;
-
-
-}
-
-.banners-item:last-of-type {
-  padding: 0px 25px 0px 25px;
-
-
+.banners-item p {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 35px;
 }
 
 .banner-button {
-  position: absolute;
-  top: 165px;
-  right: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-
-
+  align-self: flex-end;
+  padding: 11px 23px;
+  margin-bottom: 23px;
 }
 
 .catalog-list {
@@ -1554,62 +1624,6 @@ transform: translate(-900px);
 
 }
 
-
-.modal-cart {
-  width: 540px;
-  height: 245px;
-  position: relative;
-
-  }
-
-table {
-  margin: 0px 10px;
-  border-bottom: 1px solid #cacac7;
-}
-
-.table-cart span {
-
-}
-
-.modal-cart p {
-  margin: 10px 10px;
-
-
-}
-
-.modal-cart a {
-  float: right;
-  margin-right: 10px;
-
-
-}
-
-.modal-reply {
-  width: 477px;
-  height: 442px;
-  padding-top: 20px;
-  padding-left: 25px;
-
-
-}
-
-.modal-reply h2 {
-  margin-top: 0px;
-
-
-}
-
-.modal-reply button {
-  float: right;
-  margin-right: 25px;
-
-
-  }
-
-.modal-reply textarea {
-  width: 432px;
-}
-
 /*Как создать затемнение и вывод на весь экран?*/
 
 .breadcrumbs {
@@ -1689,11 +1703,3 @@ table {
 
 }
 /* Нет белого фона при нажатии ?*/
-
-
-.visually-hidden {
-  visibility: hidden;
-}
-
-
-/*Как верно отобразить Быстрый просмотр ? */

@@ -55,16 +55,51 @@
                     <input id="user-password" type="password" name="password" placeholder="Пароль">
                   </label>
                 </p>
+                <div class="login-entrance">
                 <ul class="login-list">
                   <li><a href="#link">Забыли пароль?</a></li>
                   <li><a href="#link">Новая регистрация</a></li>
                 </ul>
                 <button type="submit">Войти</button>
+              </div>
               </form>
-            </user>
+            </div>
             </section>
           </li>
-          <li><a class="cart" href="#cart"><img src="img/icon_basket.svg" width="21" height="20" alt="Корзина">Пусто</a></li>
+          <li class="modal-cart">
+            <a class="cart-link" href="#cart"><img src="img/icon_basket.svg" width="21" height="20" alt="Корзина">Пусто</a>
+            <section class="modal cart-form">
+              <h2 class="visually-hidden">Ваша корзина</h2>
+              <table class="table-cart">
+                <caption class="visually-hidden">Ваша корзина</caption>
+                  <tr class="visually-hidden">
+                    <th>Удалить</th>
+                    <th>Изображение мороженого</th>
+                    <th>Название мороженого</th>
+                    <th>Вес/Цена</th>
+                    <th>Стоимость</th>
+                  </tr>
+                  <tr>
+                    <td><button class="small-close"><img src="img/icon_cross-small.svg" width="12" height="12" alt="Закрыть"></button></td>
+                    <td><img src="img/basket-ice-cream-1.png" width="33" height="33" alt="Изображение"></td>
+                    <td>Пломбир с апельсиновым джемом</td>
+                    <td>1,5 кг х <span>200 руб.</span></td>
+                    <td>300 руб.</td>
+                  </tr>
+                  <tr>
+                    <td><button class="small-close"><img src="img/icon_cross-small.svg" width="12" height="12" alt="Закрыть"></button></td>
+                    <td><img src="img/basket-ice-cream-2.png" width="33" height="33" alt="Изображение"></td>
+                    <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                    <td>1,5 кг х <span>300 руб.</span></td>
+                    <td>450 руб.</td>
+                  </tr>
+                </table>
+                <div class="cart-confirm">
+                <p>Итого: 750 руб.</p>
+                <a class="button" href="#order">Оформить заказ</a>
+              </div>
+            </section>
+          </li>
         </ul>
       </nav>
       <div class="short-contacts">
@@ -76,25 +111,26 @@
       <h1 class="visually-hidden">Gllacy Shop. Магазин мороженого</h1>
       <section class="background">
         <h2 class="visually-hidden">Популярные предложения</h2>
-          <div class="slider-list">
-            <input type="radio" id="btn-1" name="toggle" checked>
-            <input type="radio" id="btn-2" name="toggle">
-            <input type="radio" id="btn-3" name="toggle">
+        <div class="slider-inner">
+          <div class="slider-slides">
+            <p>Крем-брюле и пломбир <br>с малиновым джемом</p>
+            <p>Шоколадный пломбир <br>и лимонный сорбет</p>
+            <p>Пломбир с помадкой <br>и клубничный щербет</p>
+          </div>
+        </div>
+        <div class="slider-list">
+          <input type="radio" id="btn-1" name="toggle" checked>
+          <input type="radio" id="btn-2" name="toggle">
+          <input type="radio" id="btn-3" name="toggle">
+          <div class="slider-block">
             <a class="slider-button button" href="#order">Давайте оба!</a>
             <div class="slider-controls">
               <label for="btn-1"></label>
               <label for="btn-2"></label>
               <label for="btn-3"></label>
             </div>
-            <div class="slider-inner">
-              <div class="slider-slides">
-                <p>Крем-брюле и пломбир <br>с малиновым джемом</p>
-                <p>Шоколадный пломбир <br>и лимонный сорбет</p>
-                <p>Пломбир с помадкой <br>и клубничный щербет</p>
-              </div>
-            </div>
-        </div>
-      </section>
+          </div>
+        </section>
       <section class="banners">
         <h2 class="visually-hidden">Особые условия</h2>
         <ul class="banners-list">
@@ -237,35 +273,7 @@
       </p>
     </footer>
 
-    <section class="modal modal-cart">
-      <h2 class="visually-hidden">Ваша корзина</h2>
-      <table class="table-cart">
-        <caption class="visually-hidden">Ваша корзина</caption>
-          <tr class="visually-hidden">
-            <th>Удалить</th>
-            <th>Изображение мороженого</th>
-            <th>Название мороженого</th>
-            <th>Вес/Цена</th>
-            <th>Стоимость</th>
-          </tr>
-          <tr>
-            <td><button class="small-close">x</button></td>
-            <td><img src="img/basket-ice-cream-1.png" width="33" height="33" alt="Изображение"></td>
-            <td>Пломбир с апельсиновым джемом</td>
-            <td>1,5 кг х <span>200 руб.</span></td>
-            <td>300 руб.</td>
-          </tr>
-          <tr>
-            <td><button class="small-close">x</button></td>
-            <td><img src="img/basket-ice-cream-2.png" width="33" height="33" alt="Изображение"></td>
-            <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-            <td>1,5 кг х <span>300 руб.</span></td>
-            <td>450 руб.</td>
-          </tr>
-        </table>
-        <p>Итого: 750 руб.</p>
-        <a class="button" href="#order">Оформить заказ</a>
-    </section>
+
     <section class="modal-reply">
       <h2>Мы обязательно Вам ответим!</h2>
       <form class="question" action="https://echo.htmlacademy.ru" method="post">
@@ -287,7 +295,6 @@
         <button type="submit">Отправить</button>
         <button type="button" class="big-close">X</button>
       </form>
-
     </section>
   </body>
 </html>

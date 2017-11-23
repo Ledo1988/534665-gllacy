@@ -102,21 +102,24 @@
           </li>
         </ul>
       </nav>
-      <div class="short-contacts">
-        <p>С 10 до 20, ежедневно</p>
-        <p>8 812 450-25-25</p>
+      <div class="breadcrumbs-box">
+        <ul class="breadcrumbs">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="#catalog.html">Каталог</a></li>
+          <li class="breadcrumbs-current">Сливочное</li>
+        </ul>
+        <div class="short-contacts-inner short-contacts">
+              <p>С 10 до 20, ежедневно</p>
+          <p>8 812 450-25-25</p>
+        </div>
       </div>
     </header>
     <main class="container">
-      <ul class="breadcrumbs">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="#catalog.html">Каталог</a></li>
-        <li class="breadcrumbs-current">Сливочное</li>
-      </ul>
       <h1 class="page-title">Сливочное мороженое</h1>
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <form class="filtr" action="index.html" method="post">
+          <div class="filters-box-first">
           <fieldset>
             <legend>Сортировка</legend>
             <select name="filtr-sort">
@@ -141,6 +144,8 @@
             <p><input type="radio" name="calories" value="<30%">до 30%</p>
             <p><input type="radio" name="calories" value=">30%">выше 30%</p>
           </fieldset>
+        </div>
+          <div class="filters-box-last">
           <fieldset>
             <legend>Наполнители:</legend>
             <p><input type="checkbox" name="chocolate" value="1" checked>шоколадные</p>
@@ -150,6 +155,7 @@
             <p><input type="checkbox" name="jams" value="5">джемы</p>
           </fieldset>
           <button type="submit">Применить</button>
+          <div>
         </form>
       </section>
       <section class="catalog">

@@ -91,10 +91,13 @@ fieldset {
 }
 
 .catalog-button {
-  text-decoration: none;
   font-weight: 700;
   background-color: #d07058;
   border-radius: 15px;
+}
+
+.catalog>a {
+  text-decoration: none;
 }
 /*Как убрать underline элемента ? */
 /*Как у ссылки убрать изменённое состояние после нажатия?*/
@@ -656,6 +659,13 @@ transform: translate(-900px);
   color: #ffbc9e;
 }
 
+.internal-navigation li:first-child::before {
+  margin-left: -15px;
+  content: url(../img/icon_heart.svg);
+  width: 15px;
+  height: 15px;
+}
+
 .internal-navigation,
 .login-list {
   list-style: none;
@@ -727,10 +737,8 @@ transform: translate(-900px);
   list-style: none;
 }
 
-.breadcrumbs li::after {
-
+.breadcrumbs li:not(:last-of-type)::after {
     content: "»";
-
 }
 /*Вставить content: "»" для всех*/
 
@@ -884,8 +892,7 @@ header, main, footer {
   margin: 0 auto;
 }
 
-.site-navigation a,
-.breadcrumbs a:not(last-of-type) {
+.site-navigation a {
   padding: 5px 10px;
 }
 
@@ -955,8 +962,12 @@ ul{
   background-color: transparent;
   box-shadow: none;
   border-radius: 0px;
-
   background-color: #fbded7;
+}
+
+li .current-page:hover {
+  background-color: #d07058;
+  color: #ffffff;
 }
 
 li .catalog-new:hover,
@@ -966,6 +977,11 @@ li .catalog-new:hover,
 
 .catalog-navigation a:active {
   background-color: #f6b5a5;
+}
+
+li .current-page:active {
+  background-color: #d07058;
+  color: #ffffff;
 }
 
 .user-navigation {
@@ -1031,7 +1047,24 @@ li .catalog-new:hover,
   text-align: left;
   padding: 15px;
   border-radius: 5px;
-  border: 1px solid #d3d3d2;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  color: #999999;
+}
+
+.search-main input::-webkit-input-placeholder {
+color: #999999;
+}
+
+.search-main input:-moz-placeholder { /* Firefox 18- */
+color: #999999;
+}
+
+.search-main input::-moz-placeholder {  /* Firefox 19+ */
+color: #999999;
+}
+
+.search-main input:-ms-input-placeholder {
+color: #999999;
 }
 
 .search-link:hover + .search-form,
@@ -1078,7 +1111,24 @@ li .catalog-new:hover,
   text-align: left;
   padding: 15px;
   border-radius: 5px;
-  border: 1px solid #d3d3d2;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  color: #999999;
+}
+
+.user input::-webkit-input-placeholder {
+color: #999999;
+}
+
+.user input:-moz-placeholder { /* Firefox 18- */
+color: #999999;
+}
+
+.user input::-moz-placeholder {  /* Firefox 19+ */
+color: #999999;
+}
+
+.user input:-ms-input-placeholder {
+color: #999999;
 }
 
 .login-entrance {
@@ -1455,153 +1505,166 @@ button[type="submit"],
 }
 
 .features-left li:first-child::before {
-  content: "";
-  background: url(../img/icon_ice-cream.svg) no-repeat 0 0;
+  content: url(../img/icon_ice-cream.svg);
   width: 49px;
   margin-top: 10px;
 }
 
 .features-left li:last-child::before {
-  content: "";
-  background: url(../img/icon_eco.svg) no-repeat 0 0;
+  content: url(../img/icon_eco.svg);
   width: 49px;
   margin-top: 10px;
 }
 
 .features-right li:first-child::before {
-  content: "";
-  background: url(../img/icon_cow.svg) no-repeat 0 0;
+  content: url(../img/icon_cow.svg);
   width: 49px;
   margin-top: 10px;
 }
 
 .features-right li:last-child::before {
-  content: "";
-  background: url(../img/icon_thermometer.svg) no-repeat 0 0;
+  content: url(../img/icon_thermometer.svg);
   width: 49px;
   margin-top: 10px;
 }
 
 .news-and-mail {
-  margin: 40px 0px 0px 0px;
+  margin: 40px 0;
   padding: 0;
+  width: 100%;
   height: 220px;
-  position: relative;
-
   display: flex;
   justify-content: space-between;
-
 }
 
 .news {
-  height: 220px;
+  display: flex;
+  flex-direction: column;
   width: 560px;
-
-  }
+}
 
 .news:first-of-type p {
   margin: 0;
-  padding: 30px 0px 0px 20px;
-
-
+  padding: 27px 0px 0px 20px;
 }
 
 .news a {
-  display: inline-block;
-  top: 0px;
   width: 290px;
-
   margin: 0;
-  padding: 5px 0px 0px 20px;
-
-
-}
-
-.news a:hover, .news a:focus{
-
-}
-
-.news a:active {
-
+  padding: 0;
+  padding-left: 20px;
+  padding-top: 15px;
 }
 
 .post-form {
-  height: 220px;
+  display: flex;
   width: 560px;
-
-
 }
 
 .mailing-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 550px;
+  margin: 6px;
 
-  height: 210px;
-  width: 530px;
-  position: relative;
-  top: -15px;
-  left: 5px;
+}
 
-  padding-left: 20px;
+.mail-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 510px;
+  margin: 0;
+  padding: 35px 20px 35px 20px;
+}
 
+.mailing-form p {
+  align-self: flex-start;
+  margin: 0 auto;
+}
 
+.signup {
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-end;
+  width: 510px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
+}
+
+.signup input {
+  width: 366px;
+  height: 44px;
+  border-radius: 5px;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  color: #999999;
+}
+
+.signup input::-webkit-input-placeholder {
+color: #999999;
+}
+
+.signup input:-moz-placeholder { /* Firefox 18- */
+color: #999999;
+}
+
+.signup input::-moz-placeholder {  /* Firefox 19+ */
+color: #999999;
+}
+
+.signup input:-ms-input-placeholder {
+color: #999999;
 }
 
 .signup button {
-
+  padding: 7.5px 15.5px;
 }
-
 
 .map {
-  display: block;
-  position: relative;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  padding: 0 ;
+  margin: 0 -2.3%;
   width: 1200px;
-  overflow: hidden;
-
-
-}
-
-
-.map span {
-
+  height: 430px;
+  overflow:hidden;
+  position: relative;
 }
 
 .contacts {
   display: block;
   width: 302px;
   height: 305px;
-
   position: absolute;
   top: 65px;
-  right: 2.3%;
-  width: 252px;
-  min-height: 240px;
-  padding-top: 28px;
-  padding-bottom: 25px;
-  padding-left: 25px;
-  padding-right: 25px;
-
-  z-index: 2;
+  right: 28px;
+  z-index: 1;
 }
 
-.contacts .button {
-
+.contacts-box {
+  display: flex;
+  width: 251px;
+  height: 241px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+  padding: 35px 26px 30px 26px;
 }
 
-.footer-navigation {
-
+.contacts-box p {
+  margin: 0;
+  margin-bottom: auto;
 }
 
-.suppliers {
-
-}
-
-.social-list {
-
+.contacts-box a {
+  margin: 0;
+  margin-top: auto;
+  padding: 9.5px 10px;
 }
 
 .social-button img {
-
   border: 3px solid rgba(255, 255, 255, 0.5);
 }
 
@@ -1616,33 +1679,122 @@ button[type="submit"],
   border: 3px solid rgba(255, 255, 255, 0.7);
 }
 
-.footer-navigation a:hover {
+.main-footer {
+  width: 95.4%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 18px;
+  margin-bottom: 25px;
+}
 
+.footer-social {
+  width: 188px;
+  margin: 0;
+  margin-right: auto;
+}
+
+.social-list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-self: flex-start;
+}
+
+.footer-navigation {
+  width: 330px;
+  align-self: center;
+}
+
+.internal-navigation {
+  height: 43px;
+  width: 305px;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.internal-navigation a {
+  text-decoration-color: #9db1a5;
 }
 
 .footer-copyright {
-
+  width: 190px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0;
+  margin-left: auto;
 }
 
-.footer-copyright a {
-
+.copyright {
+  padding: 0px;
+  text-decoration-color: #9db1a5;
 }
 
-.footer-copyright a:hover,
-.footer-copyright a:focus {
-
-}
-
+/*---INNER.HTML---*/
 /*Как создать затемнение и вывод на весь экран?*/
 
-.breadcrumbs {
-  position: relative;
+.breadcrumbs-box {
+  width: 100%;
+  height: 44px;
+  margin-top: 0px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
 
+.short-contacts-inner {
+  width: 167px;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 221px;
+}
+
+.breadcrumbs a {
+  padding: 0;
+  padding-right: 8px;
+}
+
+h1 {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-content: center;
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+
+.filtr {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+/*.breadcrumbs {
+  position: relative;
 }
 
 .breadcrumbs li::after {
     display: inline-block;
-
     position: absolute;
     top: 0px;
     left: 70px;
@@ -1652,12 +1804,6 @@ button[type="submit"],
 .filters {
   margin: 0;
   padding: 0;
-
-
-}
-
-.filters legend {
-
 }
 
 .filters button {
@@ -1666,49 +1812,14 @@ button[type="submit"],
 
   font-size: 16px;
   line-height: 18px;
-
-
   border: 2px solid #ffffff;
-
-
 }
 
 .filters button:hover,
 .filters button:focus {
-
   border: 2px solid #ffffff;
-
-
 }
 
 .filters button:active {
   border: 2px solid #ffffff;
-
 }
-
-.pagination-list {
-
-}
-
-.pagination-item {
-
-}
-
-.pagination-arrow-left img {
-
-}
-
-.pagination-arrow-right img {
-
-}
-
-.pagination-item a:hover,
-.pagination-item a:focus {
-
-}
-
-.pagination-item-current a,
-.pagination-item a:active {
-
-}
-/* Нет белого фона при нажатии ?*/

@@ -37,7 +37,9 @@ h1 {
 }
 
 fieldset {
-  }
+  border: 0px;
+  padding: 0;
+}
 
 .bg-3 {
   background-color: #9d8b84;
@@ -594,10 +596,6 @@ td:nth-child(5) {
 
 .modal-reply textarea {
   width: 432px;
-}
-
-fieldset {
-  border: 0px;
 }
 
 .short-contacts p:first-child {
@@ -1591,6 +1589,131 @@ h1 {
 
 .filters button:active {
   border: 2px solid #ffffff;
+}
+
+.filters-box-first {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.filters-box-first legend {
+  margin-left: 16px;
+}
+
+.filters-box-last {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.filters-box-last legend {
+  margin-bottom: 10px;
+  margin-left: 16px;
+}
+
+.filters-box-last p {
+  margin: 0;
+}
+
+.fat-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.fill-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+select {
+  width: 193px;
+  border-radius: 20px;
+  background-color: rgba(248, 247, 244, 0.2);
+  padding: 8.5px 14px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+select:hover,
+select:active {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+option {
+  color: #000000;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+
+  height: 22px;
+}
+
+.price-box span {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.price-box {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.number-box {
+  display: flex;
+  width: 163px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.number-box legend {
+  margin-right:2px;
+}
+
+.number-box input {
+  background-color: transparent;
+  border: 0px;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.range-box {
+  width: 176px;
+  padding: 7.5px 21px;
+  border-radius: 20px;
+  background-color: rgba(248, 247, 244, 0.2);
+  color: #ffffff;
+}
+
+input[type="range"] {
+  width: 176px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.price-box legend {
+  width:
 }
 
 .pagination-list {

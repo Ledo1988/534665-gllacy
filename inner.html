@@ -122,37 +122,47 @@
           <div class="filters-box-first">
           <fieldset>
             <legend>Сортировка</legend>
-            <select name="filtr-sort">
-              <option value="popular">по популярности</option>
-              <option value="cheap">сначала недорогие</option>
-              <option value="expensive">сначала дорогие</option>
-              <option value="calories">по жирности</option>
-            </select>
+            <div class="sort-arrow">
+              <select name="filtr-sort">
+                <option value="popular">по популярности</option>
+                <option value="cheap">сначала недорогие</option>
+                <option value="expensive">сначала дорогие</option>
+                <option value="calories">по жирности</option>
+              </select>
+            </div>
           </fieldset>
-          <fieldset>
+          <fieldset class="price-box">
+            <div class="number-box">
             <legend>Цена:</legend>
-            <input type="number" min="100" max="500" step="5" value="100">
-            <span>-</span>
-            <input type="number" min="100" max="500" step="5" value="500">
-            <span>руб.</span>
-            <input type="range" min="100" max="500">
+              <input type="number" min="100" max="500" step="5" value="100">
+              <span>-</span>
+              <input type="number" min="100" max="500" step="5" value="500">
+              <span>руб.</span>
+            </div>
+            <div class="range-box">
+              <input type="range" min="100" max="500">
+            </div>                                   
           </fieldset>
           <fieldset>
             <legend>Жирность:</legend>
-            <p><input type="radio" name="calories" value="0%">0%</p>
-            <p><input type="radio" name="calories" value="<10%" checked>до 10%</p>
-            <p><input type="radio" name="calories" value="<30%">до 30%</p>
-            <p><input type="radio" name="calories" value=">30%">выше 30%</p>
+            <div class="fat-box">
+              <p><input type="radio" name="calories" value="0%">0%</p>
+              <p><input type="radio" name="calories" value="<10%" checked>до 10%</p>
+              <p><input type="radio" name="calories" value="<30%">до 30%</p>
+              <p><input type="radio" name="calories" value=">30%">выше 30%</p>
+            </div>
           </fieldset>
         </div>
           <div class="filters-box-last">
           <fieldset>
             <legend>Наполнители:</legend>
-            <p><input type="checkbox" name="chocolate" value="1" checked>шоколадные</p>
-            <p><input type="checkbox" name="sugar powders" value="2" checked>сахарные присыпки</p>
-            <p><input type="checkbox" name="fruits" value="3">фрукты</p>
-            <p><input type="checkbox" name="syrups" value="4">сиропы</p>
-            <p><input type="checkbox" name="jams" value="5">джемы</p>
+            <div class="fill-box">
+              <p><input type="checkbox" name="chocolate" value="1" checked>шоколадные</p>
+              <p><input type="checkbox" name="sugar powders" value="2" checked>сахарные присыпки</p>
+              <p><input type="checkbox" name="fruits" value="3">фрукты</p>
+              <p><input type="checkbox" name="syrups" value="4">сиропы</p>
+              <p><input type="checkbox" name="jams" value="5">джемы</p>
+            </div>
           </fieldset>
           <button type="submit">Применить</button>
           <div>

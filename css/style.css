@@ -149,7 +149,7 @@ ul{
   border-radius: 15px;
 }
 
-.catalog>a {
+.inner-catalog>a {
   text-decoration: none;
 }
 /*Как убрать underline элемента ? */
@@ -1503,7 +1503,7 @@ color: #999999;
 .pagination-item-current a,
 .pagination-item a:active {
   color: #323232;
-
+  line-height: 18px;
   background-color: #ffffff;
   border-radius: 50%;
   font-weight: 500;
@@ -1594,5 +1594,29 @@ h1 {
 }
 
 .pagination-list {
+  display: flex;
+  width: 100%;
+  margin-top: 82px;
+  padding-bottom: 30px;
+  justify-content: flex-end;
+  align-items: center;
+}
 
+.pagination-arrow-left {
+  padding-right: 15px;
+}
+
+.pagination-arrow-right a {
+  padding: 0;
+  padding-left: 15px;
+}
+
+.pagination-arrow-right a:hover,
+.pagination-arrow-right a:focus {
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.catalog-section {
+  border-bottom: 1px solid #a9bbb1;
 }

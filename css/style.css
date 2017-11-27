@@ -72,8 +72,9 @@ fieldset {
   line-height: 18px;
   font-weight: 700;
   color: #ffffff;
-  width: 705px;
+  width: 354px;
   margin: 0 auto;
+  flex-grow: 1;
 }
 
 .navigation-box {
@@ -88,7 +89,7 @@ fieldset {
   display: flex;
   width: 154px;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .site-navigation {
@@ -102,8 +103,6 @@ fieldset {
 }
 
 .site-navigation li {
-  display: flex;
-  justify-content: flex-start;;
   margin: 0 auto;
 }
 
@@ -125,7 +124,7 @@ fieldset {
   text-decoration: none;
   border-radius: 40px;
   border: none;
-    background-color: #ffffff;
+  background-color: #ffffff;
   box-shadow: none;
 }
 
@@ -232,8 +231,7 @@ li .current-page {
 }
 
 li .current-page:hover,
-li .current-page:focus
- {
+li .current-page:focus {
   background-color: #d07058;
   color: #ffffff;
 }
@@ -350,7 +348,8 @@ color: #999999;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content:flex-end;
+  justify-content: space-around;
+  flex-grow: 1;
   align-items: center;
   position: relative;
 }
@@ -440,6 +439,7 @@ color: #999999;
   padding: 0;
   padding-left: 20px;
 
+
 }
 .login-list a {
   margin: 0;
@@ -453,7 +453,6 @@ color: #999999;
 .login-link:hover + .login-form,
 .login-form:hover {
   display: block;
-
 }
 
 .modal-cart {
@@ -467,7 +466,6 @@ color: #999999;
   justify-content: flex-end;
   align-items: center;
   position: relative;
-  margin-right: 0px;
 }
 
 .cart-form {
@@ -489,13 +487,14 @@ color: #999999;
   padding: 0;
   margin: 0;
   vertical-align: middle;
- border-bottom: 1px solid #cacac7;
+  border-bottom: 1px solid #cacac7;
 }
 
 .small-close {
   border: none;
   background-color: transparent;
   padding: 0 10px 0 5px;
+  cursor: pointer;
 }
 
 td {
@@ -714,41 +713,42 @@ button[type="submit"]:active,
 }
 
 .slider-controls {
-    width: 433px;
-    margin-bottom: 10px;
-    text-align: left;
-    }
+  width: 433px;
+  margin-bottom: 10px;
+  text-align: left;
+}
 
 .slider-controls label {
 
-    border-radius: 50%;
-    background-color: transparent;
-    transition: background-color 0.2s;
-    cursor: pointer;
-    display: inline-block;
-    width: 18px;
-    height: 18px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
 
-    border: 3px solid #ffffff;
-    margin-right: 5px;
+  border: 3px solid #ffffff;
+  margin-right: 5px;
 }
 
 .slider-controls label:hover,
 .slider-controls label:focus {
-    background-color: rgba(248,247,244,0.4);
+  background-color: rgba(248,247,244,0.4);
 }
 
 .slider-list input[type="radio"]:checked label {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 
-/*#btn-1:checked ~ .slider-controls label[for="btn-1"],
-#btn-2:checked ~ .slider-controls label[for="btn-2"],
-#btn-3:checked ~ .slider-controls label[for="btn-3"] {
-}*/
+#btn-1:checked ~ .slider-block label[for="btn-1"],
+#btn-2:checked ~ .slider-block label[for="btn-2"],
+#btn-3:checked ~ .slider-block label[for="btn-3"] {
+  background-color: #ffffff;
+}
 .banners {
   width: 100%;
-  height: 230px;
+  min-height: 230px;
   display: flex;
 
   margin: 0;
@@ -780,7 +780,6 @@ button[type="submit"]:active,
   padding: 0;
   margin: 0;
   margin-bottom: 25px;
-
 }
 
 .banners-item {
@@ -832,7 +831,7 @@ button[type="submit"]:active,
 
 .catalog-item {
   width: 267px;
-  height: 325px;
+  min-height: 325px;
   margin: 0;
   margin-bottom: 40px;
 
@@ -940,6 +939,7 @@ button[type="submit"]:active,
 
 .features {
   width: 100%;
+  display: flex;
   background-image: url("../img/bg_waffle.jpg");
   border-radius: 15px;
 }
@@ -1024,7 +1024,7 @@ button[type="submit"]:active,
   margin: 40px 0;
   padding: 0;
   width: 100%;
-  height: 220px;
+  min-height: 220px;
   display: flex;
   justify-content: space-between;
   list-style: none;
@@ -1036,7 +1036,7 @@ button[type="submit"]:active,
 .news {
   display: inline-block;
   width: 560px;
-  background-image: url("../img/bg_strawberry.jpg");
+  background: url("../img/bg_strawberry.jpg") no-repeat 0 0;
   border-radius: 15px;
 }
 
@@ -1140,7 +1140,7 @@ color: #999999;
   display: inline-block;
   padding: 0 ;
   width: 100%;
-  height: 430px;
+  min-height: 430px;
   overflow: hidden;
   position: relative;
   font-size: 14px;
@@ -1160,7 +1160,7 @@ color: #999999;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin-top: 18px;
   margin-bottom: 25px;
@@ -1168,8 +1168,7 @@ color: #999999;
 
 .footer-social {
   width: 188px;
-  margin: 0;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .social-list {
@@ -1187,15 +1186,16 @@ color: #999999;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
-
+  flex-grow: 1;
   text-decoration-line: underline;
   text-decoration-color: #ffffff;
+  margin: 0 auto;
 }
 
 .contacts {
   display: block;
   width: 302px;
-  height: 305px;
+  min-height: 305px;
   position: absolute;
   top: 65px;
   right: 28px;
@@ -1216,7 +1216,7 @@ color: #999999;
 .contacts-box {
   display: flex;
   width: 251px;
-  height: 241px;
+  min-height: 241px;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: space-between;
@@ -1291,8 +1291,7 @@ color: #999999;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
-  margin: 0;
-  margin-left: auto;
+  margin: 0 auto;
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
@@ -1317,6 +1316,7 @@ color: #999999;
 .internal-navigation {
   height: 43px;
   width: 305px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-content: flex-start;
@@ -1330,7 +1330,8 @@ color: #999999;
 }
 
 .internal-navigation li:first-child::before {
-  margin-left: -15px;
+  position: absolute;
+  left: -10px;
   content: url(../img/icon_heart.svg);
   width: 15px;
   height: 15px;
@@ -1341,10 +1342,6 @@ color: #999999;
   background-color: #f8f7f4;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
-}
-
-.modal-login {
-
 }
 
 .user button {
@@ -1385,25 +1382,16 @@ color: #999999;
   line-height: 24px;
   }
 
-.modal-reply textarea {
-
-}
-
-/*Как создать затемнение и вывод на весь экран?*/
 
 .breadcrumbs {
-
   list-style: none;
 }
 
 .breadcrumbs li:not(:last-of-type)::after {
     content: "»";
 }
-/*Вставить content: "»" для всех*/
 
 .filters {
-
-
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
@@ -1411,14 +1399,13 @@ color: #999999;
 }
 
 .filters legend {
+
   font-size: 14px;
   line-height: 16px;
   padding-bottom: 7px;
 }
 
 .filters button {
-
-
   font-size: 16px;
   line-height: 18px;
 
@@ -1502,7 +1489,7 @@ color: #999999;
 
 .breadcrumbs-box {
   width: 100%;
-  height: 44px;
+  min-height: 44px;
   margin-top: 0px;
   display: flex;
   flex-wrap: nowrap;
@@ -1553,7 +1540,7 @@ h1 {
 
 .filters button {
   width: 143px;
-  height: 36px;
+  min-height: 36px;
 
   font-size: 16px;
   line-height: 18px;
@@ -1724,12 +1711,15 @@ input[type=number]::-webkit-outer-spin-button {
     display:none;
 }
 
-.fat-box input[type="radio"] + label::before {
+.fat-box label::before {
     content: "";
     display: inline-block;
     height: 23px;
     width: 23px;
-    padding-right: 10px;
+    position: absolute;
+    top: 1px;
+    left: 0px;
+
     background-image: url(../img/icon_radio-off.svg);
     background-repeat: no-repeat;
     background-size: 23px;
@@ -1761,8 +1751,12 @@ input[type=number]::-webkit-outer-spin-button {
 .fat-box label {
   display: inline-block;
   position: relative;
+
   vertical-align: middle;
+  padding-top: 5px;
   padding-right: 15px;
+  padding-bottom: 8px;
+  padding-left: 28px;
 }
 
 p:last-of-type label {

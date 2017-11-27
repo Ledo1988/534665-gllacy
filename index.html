@@ -9,61 +9,61 @@
   </head>
   <body class="bg-1 bg-2 bg-3">
     <header class="main-header">
-      <nav class="main-navigation">
       <div class="navigation-box">
         <div class="main-header-logo">
           <img src="img/icon_logo.svg" width="154" height="62" alt="Логотип Глейси Шоп">
         </div>
-        <ul class="site-navigation">
-          <li class="catalog"><a href="#catalog.html">Каталог</a>
-            <ul class="catalog-navigation">
-              <li><a class="catalog-new" href="#new.html">Новинки</a></li>
-              <li><a href="inner.html">Сливочное</a></li>
-              <li><a href="#scrubbings.html">Щербеты</a></li>
-              <li><a href="#fruiticepops.html">Фруктовый лёд</a></li>
-              <li><a href="#melorin.html">Мелорин</a></li>
-            </ul>
-          </li>
-          <li><a href="#delivery.html">Доставка и оплата</a></li>
-          <li><a href="#info.html">О компании</a></li>
-        </ul>
-      </div>
+        <nav class="main-navigation">
+          <ul class="site-navigation">
+            <li class="catalog"><a href="#catalog.html">Каталог</a>
+              <ul class="catalog-navigation">
+                <li><a class="catalog-new" href="#new.html">Новинки</a></li>
+                <li><a href="inner.html">Сливочное</a></li>
+                <li><a href="#scrubbings.html">Щербеты</a></li>
+                <li><a href="#fruiticepops.html">Фруктовый лёд</a></li>
+                <li><a href="#melorin.html">Мелорин</a></li>
+              </ul>
+            </li>
+            <li><a href="#delivery.html">Доставка и оплата</a></li>
+            <li><a href="#info.html">О компании</a></li>
+          </ul>
+        </nav>
         <ul class="user-navigation">
           <li class="search">
             <a class="search-link" href="#search.html"><img src="img/icon_loupe.svg" width="17" height="17" alt="Поиск"></a>
             <div class="modal search-form">
-            <form class="search-main" method="get" action="https://echo.htmlacademy.ru">
-              <label for="search-text">
-                <input id="search-text" type="search" name="question" placeholder="Что ищем?">
-              </label>
-            </form>
-          </div>
+              <form class="search-main" method="get" action="https://echo.htmlacademy.ru">
+                <label for="search-text">
+                  <input id="search-text" type="search" name="question" placeholder="Что ищем?">
+                </label>
+              </form>
+            </div>
           </li>
           <li class="modal-login">
             <a class="login-link" href="#login"><img src="img/icon_entrance.svg" width="20" height="19" alt="Вход">Вход</a>
             <section class="modal login-form">
               <h2 class="visually-hidden">Личный кабинет</h2>
               <div class="user">
-              <form action="https://echo.htmlacademy.ru" method="post">
-                <p>
-                  <label for="user-login">
-                    <input id="user-login" type="email" name="email" placeholder="Электронная почта">
-                  </label>
-                </p>
-                <p>
-                  <label for="user-password">
-                    <input id="user-password" type="password" name="password" placeholder="Пароль">
-                  </label>
-                </p>
-                <div class="login-entrance">
-                <ul class="login-list">
-                  <li><a href="#link">Забыли пароль?</a></li>
-                  <li><a href="#link">Новая регистрация</a></li>
-                </ul>
-                <button type="submit">Войти</button>
+                <form action="https://echo.htmlacademy.ru" method="post">
+                  <p>
+                    <label for="user-login">
+                      <input id="user-login" type="email" name="email" placeholder="Электронная почта">
+                    </label>
+                  </p>
+                  <p>
+                    <label for="user-password">
+                      <input id="user-password" type="password" name="password" placeholder="Пароль">
+                    </label>
+                  </p>
+                  <div class="login-entrance">
+                    <ul class="login-list">
+                      <li><a href="#link">Забыли пароль?</a></li>
+                      <li><a href="#link">Новая регистрация</a></li>
+                    </ul>
+                    <button type="submit">Войти</button>
+                  </div>
+                </form>
               </div>
-              </form>
-            </div>
             </section>
           </li>
           <li class="modal-cart">
@@ -72,39 +72,39 @@
               <h2 class="visually-hidden">Ваша корзина</h2>
               <table class="table-cart">
                 <caption class="visually-hidden">Ваша корзина</caption>
-                  <tr class="visually-hidden">
-                    <th>Удалить</th>
-                    <th>Изображение мороженого</th>
-                    <th>Название мороженого</th>
-                    <th>Вес/Цена</th>
-                    <th>Стоимость</th>
-                  </tr>
-                  <tr>
-                    <td><button class="small-close"><img src="img/icon_cross-small.svg" width="12" height="12" alt="Закрыть"></button></td>
-                    <td><img src="img/basket-ice-cream-1.png" width="33" height="33" alt="Изображение"></td>
-                    <td>Пломбир с апельсиновым джемом</td>
-                    <td>1,5 кг х <span>200 руб.</span></td>
-                    <td>300 руб.</td>
-                  </tr>
-                  <tr>
-                    <td><button class="small-close"><img src="img/icon_cross-small.svg" width="12" height="12" alt="Закрыть"></button></td>
-                    <td><img src="img/basket-ice-cream-2.png" width="33" height="33" alt="Изображение"></td>
-                    <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-                    <td>1,5 кг х <span>300 руб.</span></td>
-                    <td>450 руб.</td>
-                  </tr>
-                </table>
-                <div class="cart-confirm">
+                <tr class="visually-hidden">
+                  <th>Удалить</th>
+                  <th>Изображение мороженого</th>
+                  <th>Название мороженого</th>
+                  <th>Вес/Цена</th>
+                  <th>Стоимость</th>
+                </tr>
+                <tr>
+                  <td><button class="small-close"><img src="img/icon_cross-small.svg" width="11" height="11" alt="Закрыть"></button></td>
+                  <td><img src="img/basket-ice-cream-1.png" width="33" height="33" alt="Изображение"></td>
+                  <td>Пломбир с апельсиновым джемом</td>
+                  <td>1,5 кг х <span>200 руб.</span></td>
+                  <td>300 руб.</td>
+                </tr>
+                <tr>
+                  <td><button class="small-close"><img src="img/icon_cross-small.svg" width="11" height="11" alt="Закрыть"></button></td>
+                  <td><img src="img/basket-ice-cream-2.png" width="33" height="33" alt="Изображение"></td>
+                  <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                  <td>1,5 кг х <span>300 руб.</span></td>
+                  <td>450 руб.</td>
+                </tr>
+              </table>
+              <div class="cart-confirm">
                 <p>Итого: 750 руб.</p>
                 <a class="button" href="#order">Оформить заказ</a>
               </div>
             </section>
           </li>
         </ul>
-      </nav>
-      <div class="short-contacts">
-        <p>С 10 до 20, ежедневно</p>
-        <p>8 812 450-25-25</p>
+      </div>
+        <div class="short-contacts">
+          <p>С 10 до 20, ежедневно</p>
+          <p>8 812 450-25-25</p>
       </div>
     </header>
     <main class="container">
@@ -209,24 +209,20 @@
         <div class="features-box">
         <p>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
         <ul class="features-list">
-          <div class="features-left">
           <li class="features-item">
             <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
           </li>
-          <li class="features-item">
-           <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
-         </li>
-        </div>
-        <div class="features-right">
          <li class="features-item">
            <p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
          </li>
          <li class="features-item">
+          <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+        </li>
+         <li class="features-item">
            <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
          </li>
+         </ul>
        </div>
-     </div>
-        </ul>
       </section>
       <div class="news-and-mail">
         <article class="news">
@@ -291,8 +287,6 @@
         <span>Сделано в <a class="copyright" href="https://htmlacademy.ru">HTML Academy</a> © 2017</span>
       </p>
     </footer>
-
-
     <section class="modal-reply">
       <h2>Мы обязательно Вам ответим!</h2>
       <form class="question" action="https://echo.htmlacademy.ru" method="post">

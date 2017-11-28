@@ -13,9 +13,10 @@ body {
 }
 
 header, main, footer {
-  max-width: 1144.8px;
-  min-width: 895.4px;
+  max-width: 1200px;
+  min-width: 900px;
   margin: 0 auto;
+  padding: 0 2.3%;
 
 }
 
@@ -43,21 +44,6 @@ svg {
   fill: currentColor;
 }
 
-.bg-3 {
-  background-color: #9d8b84;
-  background-image: url("../img/bg_ice-cream-3.png");
-}
-
-.bg-2 {
-  background-color: #8996a6;
-  background-image: url("../img/bg_ice-cream-2.png");
-}
-
-.bg-1 {
-  background-color: #849d8f;
-  background-image: url("../img/bg_ice-cream-1.png");
-}
-
 .inner-page {
   background-color: #849d8f;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%, transparent 15%);
@@ -66,7 +52,6 @@ svg {
 
 .main-header {
   min-height: 80px;
-  margin-top: 10px;
 }
 
 .main-navigation {
@@ -156,9 +141,6 @@ ul{
 .inner-catalog>a {
   text-decoration: none;
 }
-/*Как убрать underline элемента ? */
-/*Как у ссылки убрать изменённое состояние после нажатия?*/
-
 
 .catalog-navigation {
   background-color: #f8f7f4;
@@ -227,7 +209,6 @@ ul{
   border-radius: 0px;
   background-color: #fbded7;
 }
-/*Жирный цвет при visited*/
 
 li .current-page {
   background-color: #d07058;
@@ -647,11 +628,37 @@ td:nth-child(5) {
   list-style: none;
 }
 
+.site-wrapper {
+    min-width: 900px;
+    background-color: #849d8f;
+    background-image: url("../img/bg_ice-cream-1.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 10px;
+}
+
 .background {
+  width: 100%;
   text-align: center;
   margin: 0;
   padding: 0;
-  width: 100%;
+}
+
+.slider-slides {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide-title {
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 27px;
+
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 800;
+  color: #ffffff;
 }
 
 .background p {
@@ -660,6 +667,10 @@ td:nth-child(5) {
   font-weight: 700;
   color: #ffffff;
   text-align: center;
+}
+
+body>input {
+  display: none;
 }
 
 button[type="submit"],
@@ -674,12 +685,13 @@ button[type="submit"],
 
   border-radius: 40px;
   border: none;
+  cursor: pointer;
 }
 
 button[type="submit"]:hover,
 .button:hover {
   background-image: linear-gradient(to top, rgb(236,111,94) 100%, rgb(245,134,105) 0%);
-  box-shadow: 0px 1px 2px 0px rgb(172, 16, 0);
+  box-shadow: 0px 1px 2px 0px rgb(172, 16, 0);  
 }
 
 button[type="submit"]:active,
@@ -711,31 +723,14 @@ button[type="submit"]:active,
   background-image: linear-gradient(to top, rgba(231,74,53) 100%, rgba(242,104,67) 0%);
   box-shadow: inset 0px 2px 2px 0px rgb(148, 39, 24);
 }
-.slider-inner {
-  visibility: hidden;
-}
-
-.slider-block {
-  width: 100%;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.slider-list {
-  list-style: none;
-  position: relative;
-}
-
-.slider-list input[type="radio"] {
-  display: none;
-}
 
 .slider-controls {
   width: 433px;
   margin-bottom: 10px;
   text-align: left;
+  width: 100%;
+  list-style: none;
+  position: relative;
 }
 
 .slider-controls label {
@@ -757,8 +752,10 @@ button[type="submit"]:active,
   background-color: rgba(248,247,244,0.4);
 }
 
-.slider-list input[type="radio"]:checked label {
-  background-color: #ffffff;
+#btn-1:checked ~ .container .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .container .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .container .slider-controls label[for="btn-3"] {
+    background-color: #ffffff;
 }
 
 #btn-1:checked ~ .slider-block label[for="btn-1"],
@@ -766,6 +763,7 @@ button[type="submit"]:active,
 #btn-3:checked ~ .slider-block label[for="btn-3"] {
   background-color: #ffffff;
 }
+
 .banners {
   width: 100%;
   min-height: 230px;

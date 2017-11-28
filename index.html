@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="bg-1 bg-2 bg-3">
+  <body>
+      <input type="radio" id="btn-1" name="toggle" checked>
+      <input type="radio" id="btn-2" name="toggle">
+      <input type="radio" id="btn-3" name="toggle">
+    <div class="site-wrapper">
     <header class="main-header">
       <div class="navigation-box">
         <div class="main-header-logo">
@@ -127,26 +131,30 @@
       <h1 class="visually-hidden">Gllacy Shop. Магазин мороженого</h1>
       <section class="background">
         <h2 class="visually-hidden">Популярные предложения</h2>
-        <div class="slider-inner">
-          <div class="slider-slides">
-            <p>Крем-брюле и пломбир <br>с малиновым джемом</p>
-            <p>Шоколадный пломбир <br>и лимонный сорбет</p>
-            <p>Пломбир с помадкой <br>и клубничный щербет</p>
-          </div>
-        </div>
-        <div class="slider-list">
-          <input type="radio" id="btn-1" name="toggle" checked>
-          <input type="radio" id="btn-2" name="toggle">
-          <input type="radio" id="btn-3" name="toggle">
-          <div class="slider-block">
-            <a class="slider-button button" href="#order">Давайте оба!</a>
+        <!--<div class="bg-container" ЗДЕСЬ!!!!! 18 слайд>
+        <div class="slider-inner">-->
+          <ul class="slider-slides">
+            <li>
+              <h3 class="slide-title">Крем-брюле и пломбир с малиновым джемом</h3>
+              <a class="slider-button button" href="#order">Давайте оба!</a>
+            </li>
+            <li>
+              <h3 class="slide-title">Шоколадный пломбир и лимонный сорбет</h3>
+              <a class="slider-button button" href="#order">Давайте оба!</a>
+            </li>
+            <li>
+              <h3 class="slide-title">Пломбир с помадкой и клубничный щербет</h3>
+              <a class="slider-button button" href="#order">Давайте оба!</a>
+            </li>
+          </ul>
+
+        <!--<div class="slider-list">
+          <div class="slider-block">-->
             <div class="slider-controls">
               <label for="btn-1"></label>
               <label for="btn-2"></label>
               <label for="btn-3"></label>
             </div>
-          </div>
-        </div>
       </section>
       <section class="banners">
         <h2 class="visually-hidden">Особые условия</h2>
@@ -325,5 +333,6 @@
         <button type="button" class="big-close">X</button>
       </form>
     </section>
+  </div>
   </body>
 </html>

@@ -2126,9 +2126,21 @@ option {
 }
 
 input[type="range"] {
+  -webkit-appearance: none;
   position: absolute;
   width: 176px;
-  top: 8px;
+  top: 15px;
+  cursor: pointer;
+  height: 5px;
+  background-color: #f8f7f4;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #ffffff;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
   cursor: pointer;
 }
 

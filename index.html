@@ -12,6 +12,7 @@
       <input type="radio" id="btn-2" name="toggle">
       <input type="radio" id="btn-3" name="toggle">
     <div class="site-wrapper">
+    <div class="container">
     <header class="main-header">
       <div class="navigation-box">
         <div class="main-header-logo">
@@ -131,8 +132,6 @@
       <h1 class="visually-hidden">Gllacy Shop. Магазин мороженого</h1>
       <section class="background">
         <h2 class="visually-hidden">Популярные предложения</h2>
-        <!--<div class="bg-container" ЗДЕСЬ!!!!! 18 слайд>
-        <div class="slider-inner">-->
           <ul class="slider-slides">
             <li class="slide" id="slide1">
               <h3 class="slide-title">Крем-брюле и пломбир с малиновым джемом</h3>
@@ -147,9 +146,6 @@
               <a class="slider-button button" href="#order">Давайте оба!</a>
             </li>
           </ul>
-
-        <!--<div class="slider-list">
-          <div class="slider-block">-->
             <div class="slider-controls">
               <label for="btn-1"></label>
               <label for="btn-2"></label>
@@ -232,7 +228,7 @@
           <li class="features-item">
             <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
           </li>
-         <li class="features-item">
+          <li class="features-item">
            <p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
          </li>
          <li class="features-item">
@@ -263,51 +259,53 @@
           </section>
         </div>
       </div>
-      <section class="map">
-        <h2 class="visually-hidden">Карта, как нас найти</h2>
-        <img src="img/map_with_pin.jpg" alt="Карта" width="1250" height="430">
-        <section class="contacts">
-          <h2 class="visually-hidden">Контактная информация</h2>
-          <div class="contacts-box">
-            <p>
-              Адрес главного офиса<br>
-              и офлайн-магазина:<br>
-              <span>ул. Большая Конюшенная 19/8,
-                Санкт-Петербург</span>
-            </p>
-            <p>
-              Для заказов по телефону:<br>
-              <span>8 812 450-25-25</span><br>
-              (с 10 до 20 ежедневно)
-            </p>
-            <a class="button" href="#contacts">Форма обратной связи</a>
-            <div class="modal-reply-overlay"></div>
-            <section class="modal-reply">
-              <h2>Мы обязательно Вам ответим!</h2>
-              <form class="question" action="https://echo.htmlacademy.ru" method="post">
-              <button type="button" class="big-close"></button>
-                <p>
-                  <label for="question-name">
-                    <input id="question-name" type="text" name="name" placeholder="Как Вас зовут?">
-                  </label>
-                </p>
-                <p>
-                  <label for="question-email">
-                    <input id="question-email" type="email" name="email" placeholder="Ваша почта для ответа?">
-                  </label>
-                </p>
-                <p>
-                  <label for="question-comment">
-                    <textarea id="question-comment" name="comment" rows="5" placeholder="Напишите что-нибудь..."></textarea>
-                  </label>
-                </p>
-                <button type="submit">Отправить</button>
-              </form>
-          </section>
-          </div>
-        </section>
-      </section>
     </main>
+  </div>
+    <section class="map">
+      <h2 class="visually-hidden">Карта, как нас найти</h2>
+      <img src="img/map_with_pin.jpg" alt="Карта" width="1250" height="430">
+      <section class="contacts">
+        <h2 class="visually-hidden">Контактная информация</h2>
+        <div class="contacts-box">
+          <p>
+            Адрес главного офиса<br>
+            и офлайн-магазина:<br>
+            <span>ул. Большая Конюшенная 19/8,
+              Санкт-Петербург</span>
+          </p>
+          <p>
+            Для заказов по телефону:<br>
+            <span>8 812 450-25-25</span><br>
+            (с 10 до 20 ежедневно)
+          </p>
+          <a class="button" href="#contacts">Форма обратной связи</a>
+          <div class="modal-reply-overlay"></div>
+          <section class="modal-reply">
+            <h2>Мы обязательно Вам ответим!</h2>
+            <form class="question" action="https://echo.htmlacademy.ru" method="post">
+            <button type="button" class="big-close"></button>
+              <p>
+                <label for="question-name">
+                  <input id="question-name" type="text" name="name" placeholder="Как Вас зовут?">
+                </label>
+              </p>
+              <p>
+                <label for="question-email">
+                  <input id="question-email" type="email" name="email" placeholder="Ваша почта для ответа?">
+                </label>
+              </p>
+              <p>
+                <label for="question-comment">
+                  <textarea id="question-comment" name="comment" rows="5" placeholder="Напишите что-нибудь..."></textarea>
+                </label>
+              </p>
+              <button type="submit">Отправить</button>
+            </form>
+        </section>
+        </div>
+      </section>
+    </section>
+    <div class="container">
     <footer class="main-footer">
       <div class="footer-social">
         <ul class="social-list">
@@ -330,6 +328,7 @@
         <span>Сделано в <a class="copyright" href="https://htmlacademy.ru">HTML Academy</a> © 2017</span>
       </p>
     </footer>
+  </div>
   </div>
   </body>
 </html>

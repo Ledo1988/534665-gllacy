@@ -1276,7 +1276,6 @@ button[type="submit"]:active,
 .news,
 .post-form {
   width: 48.7%;
-  min-height: 220px;
   margin: 0;
 }
 
@@ -1323,7 +1322,6 @@ button[type="submit"]:active,
 .mailing-form {
   display: inline-block;
   width: 100%;
-  min-height: 210px;
   background-color: #f8f7f4;
   border-radius: 15px;
 }
@@ -1332,13 +1330,14 @@ button[type="submit"]:active,
   width: auto;
   margin: 0;
   padding: 30px 20px;
+  box-sizing:border-box;
 }
 
 .mailing-form p {
   -ms-flex-item-align: start;
   align-self: flex-start;
   margin: 0;
-  margin-bottom: 33px;
+  padding-bottom: 33px;
 }
 
 .signup {
@@ -1350,9 +1349,10 @@ button[type="submit"]:active,
   justify-content: space-between;
   -ms-flex-item-align: end;
   align-self: flex-end;
-  width: 510px;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  width: auto;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-bottom: 7px;
 }
 
 .signup input {

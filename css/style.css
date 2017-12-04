@@ -1330,7 +1330,7 @@ button[type="submit"]:active,
   width: auto;
   margin: 0;
   padding: 30px 20px;
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
 .mailing-form p {

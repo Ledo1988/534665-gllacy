@@ -738,7 +738,6 @@ button[type="submit"],
 .button {
   font-weight: 700;
   text-align: center;
-  vertical-align: middle;
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgb(202,56,36)), to(rgb(242,104,67)));
   background-image: -webkit-linear-gradient(bottom, rgb(202,56,36) 0%, rgb(242,104,67) 100%);
   background-image: -o-linear-gradient(bottom, rgb(202,56,36) 0%, rgb(242,104,67) 100%);
@@ -1215,6 +1214,7 @@ button[type="submit"]:active,
 
 .features-list li:nth-child(2)::before {
   content: url(../img/icon_cow.svg);
+  display: inline-block;
   width: 49px;
   height: 49px;
   vertical-align: top;
@@ -1222,6 +1222,7 @@ button[type="submit"]:active,
 
 .features-list li:nth-child(3)::before {
   content: url(../img/icon_eco.svg);
+  display: inline-block;
   width: 49px;
   height: 49px;
   vertical-align: top;
@@ -1230,6 +1231,7 @@ button[type="submit"]:active,
 
 .features-list li:last-child::before {
   content: url(../img/icon_thermometer.svg);
+  display: inline-block;
   width: 49px;
   height: 49px;
   vertical-align: top;

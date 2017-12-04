@@ -332,7 +332,7 @@ li .current-page:active {
   height: 84px;
   position: absolute;
   top: 40px;
-
+  right: 0px;
   list-style: none;
   display: none;
   z-index:1;
@@ -344,6 +344,8 @@ li .current-page:active {
 
 .search-main {
   padding: 20px 15px;
+  display: block;
+
 }
 
 .search-main input {
@@ -416,7 +418,7 @@ li .current-page:active {
   height: 214px;
   position: absolute;
   top: 40px;
-
+  right: 10px;
   list-style: none;
   display: none;
   z-index:1;
@@ -551,6 +553,7 @@ li .current-page:active {
   height: 202px;
   position: absolute;
   top: 40px;
+  right: 0;
 
   padding: 18px 15px 20px 15px;
   margin: 0;
@@ -1314,20 +1317,19 @@ button[type="submit"]:active,
 .post-form {
   background: url("../img/icon_bg_post.svg") no-repeat 0 0;
   border-radius: 15px;
+  padding: 5px;
 }
 
 .mailing-form {
   display: inline-block;
-  width: 544px;
+  width: 100%;
   min-height: 210px;
-  margin-left: 6px;
-  margin-top: 5px;
   background-color: #f8f7f4;
   border-radius: 15px;
 }
 
 .mail-box {
-  width: 510px;
+  width: auto;
   margin: 0;
   padding: 30px 20px;
 }

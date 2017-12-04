@@ -2073,6 +2073,10 @@ select {
   border: none;
 }
 
+select::-ms-expand {
+display: none;
+}
+
 select:hover,
 select:hover path {
   border: none;

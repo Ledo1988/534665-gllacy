@@ -424,6 +424,15 @@ li .current-page:active {
   z-index:1;
 }
 
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
 .login-link {
   margin: 0;
   background-color: rgba(255, 255, 255, 0.2);
@@ -986,7 +995,6 @@ button[type="submit"]:active,
   list-style: none;
 }
 
-
 .item:nth-child(4n+1) {
   margin-left: 2.3%;
 }
@@ -997,7 +1005,7 @@ button[type="submit"]:active,
 .catalog-item {
   display: inline-block;
   width: 23.3%;
-  margin-bottom: 90px;
+  margin-bottom: 42px;
 
   position: relative;
   text-align: center;
@@ -1012,13 +1020,14 @@ button[type="submit"]:active,
 .catalog-item h3 {
   display: inline-block;
   position: absolute;
-  top: 262px;
-
+  top: 263px;
+  left:0;
+  max-width: 260px;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
   text-align: center;
-
+  padding-left: 5px;
   -webkit-text-decoration-color: #9db1a5;
 
   text-decoration-color: #9db1a5;
@@ -1027,7 +1036,6 @@ button[type="submit"]:active,
 }
 
 .catalog-item h3 + img {
-
   border-radius: 50%;
   border: none;
   width: 100%;
@@ -1092,10 +1100,8 @@ button[type="submit"]:active,
 }
 
 .item-price {
-  position: absolute;
-  top: 208px;
-  left: 0;
-
+  position: relative;
+  top: -63px;
   font-size: 45px;
   line-height: 45px;
   font-weight: 700;
@@ -1194,12 +1200,14 @@ button[type="submit"]:active,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+
 }
 
 .features-item:first-of-type,
 .features-item:nth-child(3) {
   margin-right: 2.6%;
   margin-left: 1.75%;
+
 }
 
 .features-item:nth-child(2),
@@ -1275,19 +1283,24 @@ button[type="submit"]:active,
 
 .news,
 .post-form {
-  width: 48.7%;
+  width: 48.9%;
   margin: 0;
+  min-height: 220px;
 }
 
 .news {
   background: url("../img/bg_strawberry.jpg") no-repeat 0 0;
   border-radius: 15px;
-  margin-right: 2.6%;
+  position: relative;
 }
 
 .news:first-of-type p {
   position: relative;
-  margin: 20px 0px 2px 18px;
+  width: inherit;
+  margin: 0;
+  padding-left: 18px;
+  padding-top: 20px;
+  padding-bottom: 2px;
   font-weight: 500;
   text-align: left;
   color: #323232;
@@ -1316,14 +1329,19 @@ button[type="submit"]:active,
 .post-form {
   background: url("../img/icon_bg_post.svg") no-repeat 0 0;
   border-radius: 15px;
-  padding: 5px;
+  position: relative;
 }
 
 .mailing-form {
   display: inline-block;
-  width: 100%;
+  width: 98%;
   background-color: #f8f7f4;
   border-radius: 15px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top:5px;
+  left: 5px;
 }
 
 .mail-box {
@@ -1403,6 +1421,17 @@ button[type="submit"]:active,
 
 .map img {
   width: 100%;
+  z-index: 1;
+}
+
+iframe {
+  z-index: 2;
+  display: inline-block;
+  padding: 0 ;
+  width: 100%;
+  min-height: 430px;
+  position: absolute;
+  top: 0px;
 }
 
 .map span {
@@ -1432,7 +1461,7 @@ button[type="submit"]:active,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 6px;
+  margin-top: 3px;
   margin-bottom: 20px;
 }
 
@@ -1483,7 +1512,7 @@ button[type="submit"]:active,
   position: absolute;
   top: 64px;
   right: 7.5%;
-  z-index: 1;
+  z-index: 3;
 
   color: #000000;
 
@@ -2404,4 +2433,44 @@ p:last-of-type label {
 .catalog-section {
   border-bottom: 1px solid #a9bbb1;
   margin-bottom: 12px;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }

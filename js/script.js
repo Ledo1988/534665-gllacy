@@ -1,4 +1,3 @@
-  (function() {
     var link = document.querySelector('.modal-reply-button');
     var popup = document.querySelector('.modal-reply');
     var overlay = document.querySelector('.modal-reply-overlay');
@@ -52,4 +51,4 @@
           }
       }
     });
-  }());
+  

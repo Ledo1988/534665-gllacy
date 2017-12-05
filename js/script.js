@@ -50,5 +50,4 @@
             overlay.classList.remove('modal-reply-overlay-show');
           }
       }
-    });
-  
+    });  

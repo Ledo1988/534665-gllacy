@@ -5,7 +5,7 @@
     <title>Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <input type="radio" id="btn-1" name="toggle" checked>
@@ -264,7 +264,7 @@
       </div>
       <section class="map">
         <h2 class="visually-hidden">Карта, как нас найти</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1512479315824" width="100%" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1512479315824" allowfullscreen></iframe>
         <img src="img/map_with_pin.jpg" alt="Карта" width="1250" height="430">
         <section class="contacts">
           <h2 class="visually-hidden">Контактная информация</h2>
@@ -281,7 +281,8 @@
               (с 10 до 20 ежедневно)
             </p>
             <a class="button modal-reply-button" href="#contacts">Форма обратной связи</a>
-            <div class="modal-reply-overlay">
+          </div>
+          <div class="modal-reply-overlay">
             <section class="modal-reply">
               <h2>Мы обязательно Вам ответим!</h2>
               <form class="question" action="https://echo.htmlacademy.ru" method="post">
@@ -306,34 +307,33 @@
             </section>
           </div>
         </section>
-      </section>
-      <div class="container">
-        <footer class="main-footer">
-          <div class="footer-social">
-            <ul class="social-list">
-              <li><a class="social-button" href="https://twitter.com/"><img src="img/icon_twitter.svg" width="32" height="32" alt="Твиттер"></a></li>
-              <li><a class="social-button" href="https://instagram.com/"><img src="img/icon_instagram.svg" width="32" height="32" alt="Инстаграм"></a></li>
-              <li><a class="social-button" href="https://facebook.com/"><img src="img/icon_fb.svg" width="32" height="32" alt="Фейсбук"></a></li>
-              <li><a class="social-button" href="https://vk.com/"><img src="img/icon_vk.svg" width="32" height="32" alt="Вконтакте"></a></li>
-            </ul>
-          </div>
-          <div class="footer-navigation">
-            <ul class="internal-navigation">
-              <li><a href="#suppliers" class="suppliers">Для поставщиков</a></li>
-              <li><a href="#production">О производстве</a></li>
-              <li><a href="#documents" >Наши документы</a></li>
-              <li><a href="#ecostandarts" >Экологические стандарты</a></li>
-            </ul>
-          </div>
-          <p class="footer-copyright">
-            <img src="img/icon_logo-htmlacademy.svg" alt="Лого HTML Academy" width="108" height="37">
-            <span>Сделано в <a class="copyright" href="https://htmlacademy.ru">HTML Academy</a> © 2017</span>
-          </p>
-        </footer>
+        </section>
+        <div class="container">
+          <footer class="main-footer">
+            <div class="footer-social">
+              <ul class="social-list">
+                <li><a class="social-button" href="https://twitter.com/"><img src="img/icon_twitter.svg" width="32" height="32" alt="Твиттер"></a></li>
+                <li><a class="social-button" href="https://instagram.com/"><img src="img/icon_instagram.svg" width="32" height="32" alt="Инстаграм"></a></li>
+                <li><a class="social-button" href="https://facebook.com/"><img src="img/icon_fb.svg" width="32" height="32" alt="Фейсбук"></a></li>
+                <li><a class="social-button" href="https://vk.com/"><img src="img/icon_vk.svg" width="32" height="32" alt="Вконтакте"></a></li>
+              </ul>
+            </div>
+            <div class="footer-navigation">
+              <ul class="internal-navigation">
+                <li><a href="#suppliers" class="suppliers">Для поставщиков</a></li>
+                <li><a href="#production">О производстве</a></li>
+                <li><a href="#documents" >Наши документы</a></li>
+                <li><a href="#ecostandarts" >Экологические стандарты</a></li>
+              </ul>
+            </div>
+            <p class="footer-copyright">
+              <img src="img/icon_logo-htmlacademy.svg" alt="Лого HTML Academy" width="108" height="37">
+              <span>Сделано в <a class="copyright" href="https://htmlacademy.ru">HTML Academy</a> © 2017</span>
+            </p>
+          </footer>
+        </div>
       </div>
-    </div>
-    <script src="js/script.js" type="text/javascript">
-
-    </script>
+      <script src="js/script.min.js">
+      </script>
   </body>
 </html>

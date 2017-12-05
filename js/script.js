@@ -3,7 +3,7 @@
     var popup = document.querySelector('.modal-reply');
     var overlay = document.querySelector('.modal-reply-overlay');
     var close = popup.querySelector('.big-close');
-    var form = popup.querySelector('form');
+    var form = popup.querySelector('.question');
     var username = popup.querySelector('[name=username]');
     var email = popup.querySelector('[name=email]');
     var comment = popup.querySelector('[name=comment]');
@@ -50,14 +50,6 @@
             popup.classList.remove('modal-reply-error');
             overlay.classList.remove('modal-reply-overlay-show');
           }
-      }
-    });
-
-    overlay.addEventListener('click', function() {
-     if (popup.classList.contains('modal-reply-show')) {
-          popup.classList.remove('modal-reply-show');
-          popup.classList.remove('modal-reply-error');
-          overlay.classList.remove('modal-reply-overlay-show');
       }
     });
   }());

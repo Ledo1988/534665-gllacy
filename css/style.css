@@ -1539,11 +1539,6 @@ iframe {
   font-weight: 700;
 }
 
-/*.contacts-box a:active + .modal-reply,
-.modal-reply:hover {
-  display: block;
-}*/
-
 .contacts-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1576,17 +1571,12 @@ iframe {
   padding: 9.5px 10px;
 }
 
-/*.contacts-box .button:active ~ .modal-reply-overlay,
-.contacts-box .button:active ~ .modal-reply {
-  display: block;
-}*/
-
 .modal-reply {
   display: none;
   position: fixed;
   width: 455px;
   min-height: 405px;
-  top: 20%;
+  top: 10%;
   left: 32%;
   z-index: 15;
 
@@ -1608,53 +1598,17 @@ iframe {
   z-index: 10;
 }
 
+.modal-reply-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
 .modal-reply-overlay-show {
   display: block;
 }
 
 .modal-reply-error {
     animation: shake 0.6s;
-}
-
-.modal-reply-close {
-    position: absolute;
-    top: 13px;
-    right: 13px;
-    width: 22px;
-    height: 22px;
-    font-size: 0;
-    background: none;
-    border: 0;
-    outline: 0;
-    cursor: pointer;
-}
-
-.modal-reply-close::before,
-.modal-reply-close::after {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 0px;
-    width: 22px;
-    height: 2px;
-    background-color: #000000;
-}
-
-.modal-reply-close::before {
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-.modal-reply-close::after {
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-}
-
-.modal-reply-show {
-  display: block;
-    animation: bounce 0.6s;
 }
 
 .modal-reply h2 {
@@ -1700,6 +1654,13 @@ iframe {
 
 .big-close {
   position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  height: 20px;
 }
 
 .big-close::before,
@@ -1723,17 +1684,6 @@ iframe {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
-}
-
-.big-close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 0;
-  background: none;
-  border: 0;
-  cursor: pointer;
-  height: 20px;
 }
 
 .question button:last-child {

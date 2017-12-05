@@ -345,7 +345,6 @@ li .current-page:active {
 .search-main {
   padding: 20px 15px;
   display: block;
-
 }
 
 .search-main input {
@@ -356,6 +355,7 @@ li .current-page:active {
   border-radius: 5px;
   border: 1px solid rgba(178, 178, 178, 0.52);
   color: #999999;
+  box-sizing: border-box;
 }
 
 .search-main input::-webkit-input-placeholder {
@@ -421,7 +421,7 @@ li .current-page:active {
   right: 10px;
   list-style: none;
   display: none;
-  z-index:1;
+  z-index:10;
 }
 
 .modal-show {
@@ -440,6 +440,19 @@ li .current-page:active {
   vertical-align: middle;
   padding: 6px 17px 7px 15px;
   text-align: center;
+}
+
+.modal-close {
+  background-image: url("..img/icon_cross-big.svg");
+  position: absolute;
+  top: 30px;
+  right: 50px;
+
+  width: 18px;
+  height: 17px;
+
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .login-link svg {
@@ -1526,10 +1539,10 @@ iframe {
   font-weight: 700;
 }
 
-.contacts-box a:active + .modal-reply,
+/*.contacts-box a:active + .modal-reply,
 .modal-reply:hover {
   display: block;
-}
+}*/
 
 .contacts-box {
   display: -webkit-box;
@@ -1563,10 +1576,10 @@ iframe {
   padding: 9.5px 10px;
 }
 
-.contacts-box .button:active ~ .modal-reply-overlay,
+/*.contacts-box .button:active ~ .modal-reply-overlay,
 .contacts-box .button:active ~ .modal-reply {
   display: block;
-}
+}*/
 
 .modal-reply {
   display: none;
@@ -1593,6 +1606,55 @@ iframe {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 10;
+}
+
+.modal-reply-overlay-show {
+  display: block;
+}
+
+.modal-reply-error {
+    animation: shake 0.6s;
+}
+
+.modal-reply-close {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    width: 22px;
+    height: 22px;
+    font-size: 0;
+    background: none;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.modal-reply-close::before,
+.modal-reply-close::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    width: 22px;
+    height: 2px;
+    background-color: #000000;
+}
+
+.modal-reply-close::before {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.modal-reply-close::after {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.modal-reply-show {
+  display: block;
+    animation: bounce 0.6s;
 }
 
 .modal-reply h2 {

@@ -133,7 +133,7 @@
         <h1 class="page-title">Сливочное мороженое</h1>
         <section class="filters">
           <h2 class="visually-hidden">Фильтр товаров</h2>
-          <form class="filtr" action="index.html" method="post">
+          <form class="filtr" action="https://echo.htmlacademy.ru" method="post">
             <div class="filters-box-first">
               <fieldset>
                 <legend>Сортировка</legend>
@@ -167,19 +167,19 @@
               <legend>Жирность:</legend>
               <div class="fat-box">
                 <p>
-                  <input id="min" type="radio" name="calories" value="0%" checked disabled>
+                  <input id="min" type="radio" name="calories" value="0%" checked>
                   <label for="min">0%</label>
                 </p>
                 <p>
-                  <input id="till-10" type="radio" name="calories" value="<10%" checked>
+                  <input id="till-10" type="radio" name="calories" value="more than 10%" checked>
                   <label for="till-10">до 10%</label>
                 </p>
                 <p>
-                  <input id="till-30" type="radio" name="calories" value="<30%">
+                  <input id="till-30" type="radio" name="calories" value="less than 30%">
                   <label for="till-30">до 30%</label>
                 </p>
                 <p>
-                  <input id="more-30" type="radio" name="calories" value=">30%">
+                  <input id="more-30" type="radio" name="calories" value="more than 30%">
                   <label for="more-30">выше 30%</label>
                 </p>
               </div>
@@ -190,28 +190,28 @@
                 <legend>Наполнители:</legend>
                 <div class="fill-box">
                   <p>
-                    <input id="chocolate" type="checkbox" name="chocolate" value="1">
+                    <input id="chocolate" type="checkbox" name="chocolate" value="yes" checked>
                     <label for="chocolate">шоколадные</label>
                   </p>
                   <p>
-                    <input id="sugar-powders" type="checkbox" name="sugar-powders" value="2" checked disabled>
+                    <input id="sugar-powders" type="checkbox" name="sugar-powders" value="yes">
                     <label for="more-30">сахарные присыпки</label>
                 </p>
                 <p>
-                  <input id="fruits" type="checkbox" name="fruits" value="3">
+                  <input id="fruits" type="checkbox" name="fruits" value="yes">
                   <label for="fruits">фрукты</label>
                 </p>
                 <p>
-                  <input id="syrups" type="checkbox" name="syrups" value="4">
+                  <input id="syrups" type="checkbox" name="syrups" value="yes">
                   <label for="syrups">сиропы</label>
                 </p>
                 <p>
-                  <input id="jams" type="checkbox" name="jams" value="5">
+                  <input id="jams" type="checkbox" name="jams" value="yes">
                   <label for="jams">джемы</label>
                 </p>
               </div>
             </fieldset>
-            <button type="button">Применить</button>
+            <button type="submit">Применить</button>
           </div>
         </form>
       </section>

@@ -38,10 +38,6 @@ fieldset {
   padding: 0;
 }
 
-svg {
-  fill: currentColor;
-}
-
 button,
 input,
 optgroup,
@@ -387,7 +383,6 @@ li .current-page:active {
 .search-link:hover path {
   color: #000000;
   background-color: #ffffff;
-  fill: currentColor;
 }
 
 .search-link:hover + .search-form,
@@ -469,7 +464,6 @@ li .current-page:active {
 .login-link:hover,
 .login-link:hover g polygon,
 .login-link:hover g path {
-  fill: currentColor;
   color: #000000;
   background-color: #ffffff;
 }
@@ -679,7 +673,6 @@ td:nth-child(5) {
 
 .cart-link:hover,
 .cart-link:hover g {
-  fill: currentColor;
   color: #000000;
   background-color: #ffffff;
 }
